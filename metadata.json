@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix Remix Remix Remix Remix Solvofin",
+  "description": "Persistent, Location-Aware AI Urban Video \u0026 Image Intelligence Platform for Transit and Municipal Safety",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

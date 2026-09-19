@@ -1,0 +1,856 @@
+[
+  {
+    "id": "INSIGHT-INC-1789749486125-0CEQ",
+    "incidentId": "inc_test_1",
+    "timestamp": "2026-09-18T16:38:06.125Z",
+    "category": "PEDESTRIAN_SAFETY",
+    "categoryConfidenceText": "89%",
+    "rawConfidence": 0.89,
+    "summary": {
+      "header": "AI-generated summary",
+      "whatHappened": "Recorded incident indicates: Near-miss event involving fast moving delivery vehicle and pedestrian",
+      "whereItOccurred": "Location context unavailable",
+      "whenItOccurred": "@ 42s into video stream (Frame #1260)",
+      "relevantAvailableContext": "No additional contextual metadata recorded."
+    },
+    "existingPriorityPreserved": "HIGH",
+    "contextEnrichment": {
+      "matchedMedia": null,
+      "matchedVehiclePlate": null,
+      "matchedTransitBus": null,
+      "nearbyRoadDefectsCount": 0,
+      "nearbyRoadDefectsSummary": "No recorded pavement defects within immediate corridor proximity",
+      "nearbyBottlenecksSummary": "Siripuram Junction to RTC Complex Hub: Congestion index 88 (Queue: 420m, Delay: 14.2m)",
+      "heatwaveAlertSummary": "Daba Gardens Commercial Basin: 51.4°C asphalt surface (RED_SEVERE)",
+      "activeWorkOrdersCount": 0,
+      "corridorPriorIncidentsCount": 0,
+      "dataAvailability": {
+        "hasGps": false,
+        "hasMediaContext": false,
+        "hasPlateOrVehicle": false,
+        "hasNearbyDefects": false,
+        "hasWorkOrders": false,
+        "hasCorridorTelemetry": true
+      }
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU7627K5-735-CHK-001",
+        "documentId": "DOC-KB-MU7627K5-735",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.19,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      },
+      {
+        "chunkId": "DOC-KB-MU7627K8-993-CHK-001",
+        "documentId": "DOC-KB-MU7627K8-993",
+        "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+        "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+        "category": "URBAN_MOBILITY",
+        "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+        "page": "27-31",
+        "source": "Government of India Urban Mobility Framework",
+        "similarityScore": 0.1,
+        "text": "Urban traffic congestion not only inflates commuter transit delays but drastically degrades air quality and increases crash probability near chokepoints. Key Remediation Strategies for Identified Bottlenecks: 1. Queue Spillback Prevention: Signal timing offsets must be synchronized dynamically based on queue length detected at downstream intersections to prevent gridlock. 2. Geometric Optimization: Removal of visual and physical bottlenecks—such as illegal street parking within 50m of intersections, poorly positioned bus stops that block through-lanes, and abrupt road narrowing. 3. Dedicated Transit Lanes: On corridors with bus volumes exceeding 30 buses/hour during peak periods, dedicated curb-side or median bus lanes should be demarcated with distinct colorized surfacing and camera enforcement to maintain public transit headways and reliability."
+      },
+      {
+        "chunkId": "DOC-KB-MU7627K2-960-CHK-001",
+        "documentId": "DOC-KB-MU7627K2-960",
+        "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+        "organization": "Ministry of Road Transport and Highways (MoRTH)",
+        "category": "ROAD_SAFETY",
+        "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+        "page": "12-16",
+        "source": "Government of India Transport Planning Circular RW/NH-15017/47/2018-P&M",
+        "url": "https://morth.nic.in",
+        "similarityScore": 0.08,
+        "text": "A road accident black spot is defined as a road stretch of about 500 meters along which either 5 road accidents involving serious injuries/fatalities or 10 fatalities occurred during the last 3 calendar years. Prioritization for Immediate Engineering Remediation: 1. Hazardous Surface Irregularities: Severe pavement drop-offs (>50mm), recurrent deep potholes in deceleration zones, and polished aggregates causing skidding. 2. Visibility and Crosswalk Safety: Faded or unilluminated zebra crossings near schools and transit stations require retroreflective thermoplastic markings (minimum 2.5mm thickness with Type-II glass beads) and advance rumble strips. 3. Geometric Interventions: Rectification of abrupt lane drop-offs and damaged central median dividers. Where median openings are unofficial or broken, precast concrete New Jersey barriers or steel W-beam crash barriers conforming to IRC:119-2015 must be erected to eliminate illegal U-turns and erratic zig-zag maneuvers."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative transit safety and civil engineering standards (MoRTH / NUTP / IRC).",
+    "interpretation": {
+      "suggestedAttentionLevel": "High",
+      "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+      "factorsConsidered": [
+        "Source event type: COLLISION_RISK",
+        "Original recorded severity: HIGH",
+        "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors, MoRTH Guidelines for Identification & Rectification of Accident Black Spots"
+      ],
+      "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+      "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+    },
+    "recommendedAction": {
+      "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+      "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+      "urgencyText": "Within 4-8 hours for high-footfall intersections",
+      "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+    },
+    "whyThisResult": {
+      "summary": "AI analyzed incident #inc_test_1 (COLLISION_RISK) with HIGH priority.",
+      "existingIncidentInfoConsidered": "Type: COLLISION_RISK, Severity: HIGH, Description: \"Near-miss event involving fast moving delivery vehicle and pedestrian\", Timestamp: @ 42s into video stream (Frame #1260), Confidence: 89%.",
+      "additionalOperationalContextConsidered": "Media: N/A, Road: N/A, Defect context: No recorded pavement defects within immediate corridor proximity, Bottleneck context: Siripuram Junction to RTC Complex Hub: Congestion index 88 (Queue: 420m, Delay: 14.2m).",
+      "ragEvidenceRetrieved": "[United Nations Human Settlements Programme (UN-Habitat)] United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework (Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All, p.Clause 11.2.1); [Ministry of Housing and Urban Affairs (MoHUA)] National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors (Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority, p.27-31); [Ministry of Road Transport and Highways (MoRTH)] MoRTH Guidelines for Identification & Rectification of Accident Black Spots (Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures, p.12-16)",
+      "aiInterpretation": "Classified as PEDESTRIAN_SAFETY with suggested attention level \"High\". Rationale: High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+      "recommendationProduced": "Advisory action: \"Verify Pedestrian Safety Infrastructure & Crosswalk Marking\" targeting Municipal Road Safety & Pedestrian Infrastructure Cell. (Target urgency: Within 4-8 hours for high-footfall intersections).",
+      "missingInformation": "Accurate geolocation coordinates unavailable in incident record.; Vehicle registration plate unrecorded or obscured in source camera feed.; Instantaneous vehicle speed telemetry unavailable.; Driver interview / statement unrecorded.; External ambient audio and micro-weather sensor telemetry unrecorded."
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in incident record.",
+      "Vehicle registration plate unrecorded or obscured in source camera feed.",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver interview / statement unrecorded.",
+      "External ambient audio and micro-weather sensor telemetry unrecorded."
+    ],
+    "limitations": [
+      "Advisory Decision Support Only: This AI Incident Intelligence layer provides structured operational decision support for transit dispatchers and urban safety supervisors. It does not replace professional human judgment.",
+      "Non-Autonomous Operations: The system does not automatically close incidents, modify statutory records, issue citations, dispatch emergency units, or authorize financial expenditures.",
+      "Strict Prohibition on Fault & Liability: Optical and telemetric data cannot establish legal fault, intentionality, or statutory liability without authorized judicial or administrative proceedings.",
+      "Contextual Dependency: Analysis is bounded by available video timestamps, camera resolution, lighting quality, and database telemetry completeness.",
+      "Authoritative Standard Alignment: Retrieved evidence reflects standard public safety guidelines (MoRTH / NUTP / IRC) and must be applied in accordance with local municipal protocols."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Incident AI Intelligence layer supports municipal traffic safety managers by synthesizing incident evidence with authoritative transit safety standards, contributing to safer, accessible, and resilient urban mobility."
+    },
+    "humanReview": {
+      "reviewId": "REV-INC-1789749489386-LKF0",
+      "status": "ACCEPTED",
+      "reviewedBy": "Officer Sharma",
+      "reviewerRole": "ADMIN",
+      "reviewedAt": "2026-09-18T16:38:09.386Z",
+      "reviewerComments": "Verified telemetry and near-miss footage. Dispatching field safety review team.",
+      "originalAiRecommendation": {
+        "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+        "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+        "urgencyText": "Within 4-8 hours for high-footfall intersections",
+        "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+        "isAutonomous": false,
+        "requiresHumanReview": true,
+        "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+      }
+    },
+    "reviewHistory": [
+      {
+        "status": "PENDING",
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        }
+      },
+      {
+        "reviewId": "REV-INC-1789749489386-LKF0",
+        "status": "ACCEPTED",
+        "reviewedBy": "Officer Sharma",
+        "reviewerRole": "ADMIN",
+        "reviewedAt": "2026-09-18T16:38:09.386Z",
+        "reviewerComments": "Verified telemetry and near-miss footage. Dispatching field safety review team.",
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-INC-1789749486126-XIU1",
+        "insightId": "INSIGHT-INC-1789749486125-0CEQ",
+        "incidentId": "inc_test_1",
+        "timestampAiGeneration": "2026-09-18T16:38:06.125Z",
+        "existingIncidentRecordSummary": "COLLISION_RISK | HIGH | Location context unavailable | @ 42s into video stream (Frame #1260)",
+        "originalAiSummary": {
+          "header": "AI-generated summary",
+          "whatHappened": "Recorded incident indicates: Near-miss event involving fast moving delivery vehicle and pedestrian",
+          "whereItOccurred": "Location context unavailable",
+          "whenItOccurred": "@ 42s into video stream (Frame #1260)",
+          "relevantAvailableContext": "No additional contextual metadata recorded."
+        },
+        "originalAiInterpretation": {
+          "suggestedAttentionLevel": "High",
+          "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+          "factorsConsidered": [
+            "Source event type: COLLISION_RISK",
+            "Original recorded severity: HIGH",
+            "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors, MoRTH Guidelines for Identification & Rectification of Accident Black Spots"
+          ],
+          "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+          "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+        },
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU7627K5-735",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU7627K8-993",
+            "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+            "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+            "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+            "page": "27-31"
+          },
+          {
+            "documentId": "DOC-KB-MU7627K2-960",
+            "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+            "organization": "Ministry of Road Transport and Highways (MoRTH)",
+            "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+            "page": "12-16",
+            "url": "https://morth.nic.in"
+          }
+        ],
+        "reviewDecision": "PENDING",
+        "reviewerIdentity": "Automated AI Intelligence Synthesizer",
+        "reviewerRole": "SYSTEM",
+        "reviewTimestamp": "2026-09-18T16:38:06.125Z",
+        "reviewerComment": "Initial AI-generated decision support package queued for human supervisor review."
+      },
+      {
+        "auditId": "AUDIT-INC-1789749489386-4V68",
+        "insightId": "INSIGHT-INC-1789749486125-0CEQ",
+        "incidentId": "inc_test_1",
+        "timestampAiGeneration": "2026-09-18T16:38:06.125Z",
+        "existingIncidentRecordSummary": "Recorded incident indicates: Near-miss event involving fast moving delivery vehicle and pedestrian | Location context unavailable",
+        "originalAiSummary": {
+          "header": "AI-generated summary",
+          "whatHappened": "Recorded incident indicates: Near-miss event involving fast moving delivery vehicle and pedestrian",
+          "whereItOccurred": "Location context unavailable",
+          "whenItOccurred": "@ 42s into video stream (Frame #1260)",
+          "relevantAvailableContext": "No additional contextual metadata recorded."
+        },
+        "originalAiInterpretation": {
+          "suggestedAttentionLevel": "High",
+          "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+          "factorsConsidered": [
+            "Source event type: COLLISION_RISK",
+            "Original recorded severity: HIGH",
+            "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors, MoRTH Guidelines for Identification & Rectification of Accident Black Spots"
+          ],
+          "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+          "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+        },
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU7627K5-735",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU7627K8-993",
+            "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+            "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+            "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+            "page": "27-31"
+          },
+          {
+            "documentId": "DOC-KB-MU7627K2-960",
+            "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+            "organization": "Ministry of Road Transport and Highways (MoRTH)",
+            "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+            "page": "12-16",
+            "url": "https://morth.nic.in"
+          }
+        ],
+        "reviewDecision": "ACCEPTED",
+        "reviewerIdentity": "Officer Sharma",
+        "reviewerRole": "ADMIN",
+        "reviewTimestamp": "2026-09-18T16:38:09.386Z",
+        "reviewerComment": "Verified telemetry and near-miss footage. Dispatching field safety review team."
+      }
+    ]
+  },
+  {
+    "id": "INSIGHT-INC-1789754406615-UW97",
+    "incidentId": "INC-01",
+    "timestamp": "2026-09-18T18:00:06.615Z",
+    "category": "PEDESTRIAN_SAFETY",
+    "categoryConfidenceText": "92%",
+    "rawConfidence": 0.92,
+    "summary": {
+      "header": "AI-generated summary",
+      "whatHappened": "Recorded incident indicates: Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.",
+      "whereItOccurred": "17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4)",
+      "whenItOccurred": "@ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+      "relevantAvailableContext": "Plate: AP39TG2041 • Track ID: CAR-101 • 5 nearby road defect(s)"
+    },
+    "existingPriorityPreserved": "HIGH",
+    "contextEnrichment": {
+      "matchedMedia": {
+        "id": "MEDIA-00101",
+        "filename": "transit_route_18_coastal_highway.mp4",
+        "road_name": "Coastal Corridor NH-16 Sector 4",
+        "location": "Coastal Corridor NH-16 Sector 4",
+        "capture_time": "2026-09-01T06:32:14.000Z"
+      },
+      "matchedVehiclePlate": {
+        "plate": "AP39TG2041",
+        "category": "CAR",
+        "speed": 44,
+        "jurisdiction": "Andhra Pradesh"
+      },
+      "matchedTransitBus": null,
+      "nearbyRoadDefectsCount": 5,
+      "nearbyRoadDefectsSummary": "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+      "nearbyBottlenecksSummary": "Siripuram Junction to RTC Complex Hub: Congestion index 88 (Queue: 420m, Delay: 14.2m)",
+      "heatwaveAlertSummary": "Daba Gardens Commercial Basin: 51.4°C asphalt surface (RED_SEVERE)",
+      "activeWorkOrdersCount": 0,
+      "corridorPriorIncidentsCount": 2,
+      "dataAvailability": {
+        "hasGps": true,
+        "hasMediaContext": true,
+        "hasPlateOrVehicle": true,
+        "hasNearbyDefects": true,
+        "hasWorkOrders": false,
+        "hasCorridorTelemetry": true
+      }
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8T-855-CHK-001",
+        "documentId": "DOC-KB-MU77XW8T-855",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.19,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-558-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-558",
+        "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+        "organization": "Ministry of Road Transport and Highways (MoRTH)",
+        "category": "ROAD_SAFETY",
+        "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+        "page": "12-16",
+        "source": "Government of India Transport Planning Circular RW/NH-15017/47/2018-P&M",
+        "url": "https://morth.nic.in",
+        "similarityScore": 0.18,
+        "text": "A road accident black spot is defined as a road stretch of about 500 meters along which either 5 road accidents involving serious injuries/fatalities or 10 fatalities occurred during the last 3 calendar years. Prioritization for Immediate Engineering Remediation: 1. Hazardous Surface Irregularities: Severe pavement drop-offs (>50mm), recurrent deep potholes in deceleration zones, and polished aggregates causing skidding. 2. Visibility and Crosswalk Safety: Faded or unilluminated zebra crossings near schools and transit stations require retroreflective thermoplastic markings (minimum 2.5mm thickness with Type-II glass beads) and advance rumble strips. 3. Geometric Interventions: Rectification of abrupt lane drop-offs and damaged central median dividers. Where median openings are unofficial or broken, precast concrete New Jersey barriers or steel W-beam crash barriers conforming to IRC:119-2015 must be erected to eliminate illegal U-turns and erratic zig-zag maneuvers."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8W-582-CHK-001",
+        "documentId": "DOC-KB-MU77XW8W-582",
+        "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+        "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+        "category": "URBAN_MOBILITY",
+        "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+        "page": "27-31",
+        "source": "Government of India Urban Mobility Framework",
+        "similarityScore": 0.09,
+        "text": "Urban traffic congestion not only inflates commuter transit delays but drastically degrades air quality and increases crash probability near chokepoints. Key Remediation Strategies for Identified Bottlenecks: 1. Queue Spillback Prevention: Signal timing offsets must be synchronized dynamically based on queue length detected at downstream intersections to prevent gridlock. 2. Geometric Optimization: Removal of visual and physical bottlenecks—such as illegal street parking within 50m of intersections, poorly positioned bus stops that block through-lanes, and abrupt road narrowing. 3. Dedicated Transit Lanes: On corridors with bus volumes exceeding 30 buses/hour during peak periods, dedicated curb-side or median bus lanes should be demarcated with distinct colorized surfacing and camera enforcement to maintain public transit headways and reliability."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative transit safety and civil engineering standards (MoRTH / NUTP / IRC).",
+    "interpretation": {
+      "suggestedAttentionLevel": "High",
+      "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+      "factorsConsidered": [
+        "Source event type: PEDESTRIAN_RISK",
+        "Original recorded severity: HIGH",
+        "Geospatial coordinates (17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4))",
+        "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+        "Vehicle record (AP39TG2041)",
+        "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, MoRTH Guidelines for Identification & Rectification of Accident Black Spots, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors"
+      ],
+      "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+      "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+    },
+    "recommendedAction": {
+      "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+      "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+      "urgencyText": "Within 4-8 hours for high-footfall intersections",
+      "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+    },
+    "whyThisResult": {
+      "summary": "AI analyzed incident #INC-01 (PEDESTRIAN_RISK) with HIGH priority.",
+      "existingIncidentInfoConsidered": "Type: PEDESTRIAN_RISK, Severity: HIGH, Description: \"Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.\", Timestamp: @ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z], Confidence: 92%.",
+      "additionalOperationalContextConsidered": "Media: transit_route_18_coastal_highway.mp4, Road: Coastal Corridor NH-16 Sector 4, Defect context: 5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH]), Bottleneck context: Siripuram Junction to RTC Complex Hub: Congestion index 88 (Queue: 420m, Delay: 14.2m).",
+      "ragEvidenceRetrieved": "[United Nations Human Settlements Programme (UN-Habitat)] United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework (Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All, p.Clause 11.2.1); [Ministry of Road Transport and Highways (MoRTH)] MoRTH Guidelines for Identification & Rectification of Accident Black Spots (Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures, p.12-16); [Ministry of Housing and Urban Affairs (MoHUA)] National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors (Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority, p.27-31)",
+      "aiInterpretation": "Classified as PEDESTRIAN_SAFETY with suggested attention level \"High\". Rationale: High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+      "recommendationProduced": "Advisory action: \"Verify Pedestrian Safety Infrastructure & Crosswalk Marking\" targeting Municipal Road Safety & Pedestrian Infrastructure Cell. (Target urgency: Within 4-8 hours for high-footfall intersections).",
+      "missingInformation": "Driver interview / statement unrecorded.; External ambient audio and micro-weather sensor telemetry unrecorded."
+    },
+    "missingInformation": [
+      "Driver interview / statement unrecorded.",
+      "External ambient audio and micro-weather sensor telemetry unrecorded."
+    ],
+    "limitations": [
+      "Advisory Decision Support Only: This AI Incident Intelligence layer provides structured operational decision support for transit dispatchers and urban safety supervisors. It does not replace professional human judgment.",
+      "Non-Autonomous Operations: The system does not automatically close incidents, modify statutory records, issue citations, dispatch emergency units, or authorize financial expenditures.",
+      "Strict Prohibition on Fault & Liability: Optical and telemetric data cannot establish legal fault, intentionality, or statutory liability without authorized judicial or administrative proceedings.",
+      "Contextual Dependency: Analysis is bounded by available video timestamps, camera resolution, lighting quality, and database telemetry completeness.",
+      "Authoritative Standard Alignment: Retrieved evidence reflects standard public safety guidelines (MoRTH / NUTP / IRC) and must be applied in accordance with local municipal protocols."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Incident AI Intelligence layer supports municipal traffic safety managers by synthesizing incident evidence with authoritative transit safety standards, contributing to safer, accessible, and resilient urban mobility."
+    },
+    "humanReview": {
+      "status": "PENDING",
+      "originalAiRecommendation": {
+        "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+        "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+        "urgencyText": "Within 4-8 hours for high-footfall intersections",
+        "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+        "isAutonomous": false,
+        "requiresHumanReview": true,
+        "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+      }
+    },
+    "reviewHistory": [
+      {
+        "status": "PENDING",
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-INC-1789754406616-6N0R",
+        "insightId": "INSIGHT-INC-1789754406615-UW97",
+        "incidentId": "INC-01",
+        "timestampAiGeneration": "2026-09-18T18:00:06.615Z",
+        "existingIncidentRecordSummary": "PEDESTRIAN_RISK | HIGH | 17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4) | @ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+        "originalAiSummary": {
+          "header": "AI-generated summary",
+          "whatHappened": "Recorded incident indicates: Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.",
+          "whereItOccurred": "17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4)",
+          "whenItOccurred": "@ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+          "relevantAvailableContext": "Plate: AP39TG2041 • Track ID: CAR-101 • 5 nearby road defect(s)"
+        },
+        "originalAiInterpretation": {
+          "suggestedAttentionLevel": "High",
+          "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+          "factorsConsidered": [
+            "Source event type: PEDESTRIAN_RISK",
+            "Original recorded severity: HIGH",
+            "Geospatial coordinates (17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4))",
+            "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+            "Vehicle record (AP39TG2041)",
+            "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, MoRTH Guidelines for Identification & Rectification of Accident Black Spots, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors"
+          ],
+          "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+          "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+        },
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU77XW8T-855",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8Q-558",
+            "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+            "organization": "Ministry of Road Transport and Highways (MoRTH)",
+            "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+            "page": "12-16",
+            "url": "https://morth.nic.in"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8W-582",
+            "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+            "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+            "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+            "page": "27-31"
+          }
+        ],
+        "reviewDecision": "PENDING",
+        "reviewerIdentity": "Automated AI Intelligence Synthesizer",
+        "reviewerRole": "SYSTEM",
+        "reviewTimestamp": "2026-09-18T18:00:06.615Z",
+        "reviewerComment": "Initial AI-generated decision support package queued for human supervisor review."
+      }
+    ]
+  },
+  {
+    "id": "INSIGHT-INC-1789754465092-J0ZU",
+    "incidentId": "INC-01",
+    "timestamp": "2026-09-18T18:01:05.092Z",
+    "category": "PEDESTRIAN_SAFETY",
+    "categoryConfidenceText": "92%",
+    "rawConfidence": 0.92,
+    "summary": {
+      "header": "AI-generated summary",
+      "whatHappened": "Recorded incident indicates: Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.",
+      "whereItOccurred": "17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4)",
+      "whenItOccurred": "@ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+      "relevantAvailableContext": "Plate: AP39TG2041 • Track ID: CAR-101 • 5 nearby road defect(s)"
+    },
+    "existingPriorityPreserved": "HIGH",
+    "contextEnrichment": {
+      "matchedMedia": {
+        "id": "MEDIA-00101",
+        "filename": "transit_route_18_coastal_highway.mp4",
+        "road_name": "Coastal Corridor NH-16 Sector 4",
+        "location": "Coastal Corridor NH-16 Sector 4",
+        "capture_time": "2026-09-01T06:32:14.000Z"
+      },
+      "matchedVehiclePlate": {
+        "plate": "AP39TG2041",
+        "category": "CAR",
+        "speed": 44,
+        "jurisdiction": "Andhra Pradesh"
+      },
+      "matchedTransitBus": null,
+      "nearbyRoadDefectsCount": 5,
+      "nearbyRoadDefectsSummary": "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+      "nearbyBottlenecksSummary": "Siripuram Junction to RTC Complex Hub: Congestion index 88 (Queue: 420m, Delay: 14.2m)",
+      "heatwaveAlertSummary": "Daba Gardens Commercial Basin: 51.4°C asphalt surface (RED_SEVERE)",
+      "activeWorkOrdersCount": 0,
+      "corridorPriorIncidentsCount": 2,
+      "dataAvailability": {
+        "hasGps": true,
+        "hasMediaContext": true,
+        "hasPlateOrVehicle": true,
+        "hasNearbyDefects": true,
+        "hasWorkOrders": false,
+        "hasCorridorTelemetry": true
+      }
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8T-855-CHK-001",
+        "documentId": "DOC-KB-MU77XW8T-855",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.19,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-558-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-558",
+        "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+        "organization": "Ministry of Road Transport and Highways (MoRTH)",
+        "category": "ROAD_SAFETY",
+        "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+        "page": "12-16",
+        "source": "Government of India Transport Planning Circular RW/NH-15017/47/2018-P&M",
+        "url": "https://morth.nic.in",
+        "similarityScore": 0.18,
+        "text": "A road accident black spot is defined as a road stretch of about 500 meters along which either 5 road accidents involving serious injuries/fatalities or 10 fatalities occurred during the last 3 calendar years. Prioritization for Immediate Engineering Remediation: 1. Hazardous Surface Irregularities: Severe pavement drop-offs (>50mm), recurrent deep potholes in deceleration zones, and polished aggregates causing skidding. 2. Visibility and Crosswalk Safety: Faded or unilluminated zebra crossings near schools and transit stations require retroreflective thermoplastic markings (minimum 2.5mm thickness with Type-II glass beads) and advance rumble strips. 3. Geometric Interventions: Rectification of abrupt lane drop-offs and damaged central median dividers. Where median openings are unofficial or broken, precast concrete New Jersey barriers or steel W-beam crash barriers conforming to IRC:119-2015 must be erected to eliminate illegal U-turns and erratic zig-zag maneuvers."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8W-582-CHK-001",
+        "documentId": "DOC-KB-MU77XW8W-582",
+        "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+        "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+        "category": "URBAN_MOBILITY",
+        "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+        "page": "27-31",
+        "source": "Government of India Urban Mobility Framework",
+        "similarityScore": 0.09,
+        "text": "Urban traffic congestion not only inflates commuter transit delays but drastically degrades air quality and increases crash probability near chokepoints. Key Remediation Strategies for Identified Bottlenecks: 1. Queue Spillback Prevention: Signal timing offsets must be synchronized dynamically based on queue length detected at downstream intersections to prevent gridlock. 2. Geometric Optimization: Removal of visual and physical bottlenecks—such as illegal street parking within 50m of intersections, poorly positioned bus stops that block through-lanes, and abrupt road narrowing. 3. Dedicated Transit Lanes: On corridors with bus volumes exceeding 30 buses/hour during peak periods, dedicated curb-side or median bus lanes should be demarcated with distinct colorized surfacing and camera enforcement to maintain public transit headways and reliability."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative transit safety and civil engineering standards (MoRTH / NUTP / IRC).",
+    "interpretation": {
+      "suggestedAttentionLevel": "High",
+      "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+      "factorsConsidered": [
+        "Source event type: PEDESTRIAN_RISK",
+        "Original recorded severity: HIGH",
+        "Geospatial coordinates (17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4))",
+        "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+        "Vehicle record (AP39TG2041)",
+        "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, MoRTH Guidelines for Identification & Rectification of Accident Black Spots, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors"
+      ],
+      "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+      "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+    },
+    "recommendedAction": {
+      "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+      "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+      "urgencyText": "Within 4-8 hours for high-footfall intersections",
+      "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+    },
+    "whyThisResult": {
+      "summary": "AI analyzed incident #INC-01 (PEDESTRIAN_RISK) with HIGH priority.",
+      "existingIncidentInfoConsidered": "Type: PEDESTRIAN_RISK, Severity: HIGH, Description: \"Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.\", Timestamp: @ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z], Confidence: 92%.",
+      "additionalOperationalContextConsidered": "Media: transit_route_18_coastal_highway.mp4, Road: Coastal Corridor NH-16 Sector 4, Defect context: 5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH]), Bottleneck context: Siripuram Junction to RTC Complex Hub: Congestion index 88 (Queue: 420m, Delay: 14.2m).",
+      "ragEvidenceRetrieved": "[United Nations Human Settlements Programme (UN-Habitat)] United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework (Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All, p.Clause 11.2.1); [Ministry of Road Transport and Highways (MoRTH)] MoRTH Guidelines for Identification & Rectification of Accident Black Spots (Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures, p.12-16); [Ministry of Housing and Urban Affairs (MoHUA)] National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors (Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority, p.27-31)",
+      "aiInterpretation": "Classified as PEDESTRIAN_SAFETY with suggested attention level \"High\". Rationale: High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+      "recommendationProduced": "Advisory action: \"Verify Pedestrian Safety Infrastructure & Crosswalk Marking\" targeting Municipal Road Safety & Pedestrian Infrastructure Cell. (Target urgency: Within 4-8 hours for high-footfall intersections).",
+      "missingInformation": "Driver interview / statement unrecorded.; External ambient audio and micro-weather sensor telemetry unrecorded."
+    },
+    "missingInformation": [
+      "Driver interview / statement unrecorded.",
+      "External ambient audio and micro-weather sensor telemetry unrecorded."
+    ],
+    "limitations": [
+      "Advisory Decision Support Only: This AI Incident Intelligence layer provides structured operational decision support for transit dispatchers and urban safety supervisors. It does not replace professional human judgment.",
+      "Non-Autonomous Operations: The system does not automatically close incidents, modify statutory records, issue citations, dispatch emergency units, or authorize financial expenditures.",
+      "Strict Prohibition on Fault & Liability: Optical and telemetric data cannot establish legal fault, intentionality, or statutory liability without authorized judicial or administrative proceedings.",
+      "Contextual Dependency: Analysis is bounded by available video timestamps, camera resolution, lighting quality, and database telemetry completeness.",
+      "Authoritative Standard Alignment: Retrieved evidence reflects standard public safety guidelines (MoRTH / NUTP / IRC) and must be applied in accordance with local municipal protocols."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Incident AI Intelligence layer supports municipal traffic safety managers by synthesizing incident evidence with authoritative transit safety standards, contributing to safer, accessible, and resilient urban mobility."
+    },
+    "humanReview": {
+      "reviewId": "REV-INC-1789754465109-TGLK",
+      "status": "ACCEPTED",
+      "reviewedBy": "Inspector K. Rao",
+      "reviewerRole": "TRAFFIC_POLICE_SUPERINTENDENT",
+      "reviewedAt": "2026-09-18T18:01:05.109Z",
+      "reviewerComments": "Emergency services already arrived on scene.",
+      "originalAiRecommendation": {
+        "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+        "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+        "urgencyText": "Within 4-8 hours for high-footfall intersections",
+        "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+        "isAutonomous": false,
+        "requiresHumanReview": true,
+        "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+      }
+    },
+    "reviewHistory": [
+      {
+        "status": "PENDING",
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        }
+      },
+      {
+        "reviewId": "REV-INC-1789754465109-TGLK",
+        "status": "ACCEPTED",
+        "reviewedBy": "Inspector K. Rao",
+        "reviewerRole": "TRAFFIC_POLICE_SUPERINTENDENT",
+        "reviewedAt": "2026-09-18T18:01:05.109Z",
+        "reviewerComments": "Emergency services already arrived on scene.",
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-INC-1789754465092-WIW5",
+        "insightId": "INSIGHT-INC-1789754465092-J0ZU",
+        "incidentId": "INC-01",
+        "timestampAiGeneration": "2026-09-18T18:01:05.092Z",
+        "existingIncidentRecordSummary": "PEDESTRIAN_RISK | HIGH | 17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4) | @ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+        "originalAiSummary": {
+          "header": "AI-generated summary",
+          "whatHappened": "Recorded incident indicates: Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.",
+          "whereItOccurred": "17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4)",
+          "whenItOccurred": "@ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+          "relevantAvailableContext": "Plate: AP39TG2041 • Track ID: CAR-101 • 5 nearby road defect(s)"
+        },
+        "originalAiInterpretation": {
+          "suggestedAttentionLevel": "High",
+          "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+          "factorsConsidered": [
+            "Source event type: PEDESTRIAN_RISK",
+            "Original recorded severity: HIGH",
+            "Geospatial coordinates (17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4))",
+            "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+            "Vehicle record (AP39TG2041)",
+            "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, MoRTH Guidelines for Identification & Rectification of Accident Black Spots, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors"
+          ],
+          "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+          "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+        },
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU77XW8T-855",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8Q-558",
+            "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+            "organization": "Ministry of Road Transport and Highways (MoRTH)",
+            "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+            "page": "12-16",
+            "url": "https://morth.nic.in"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8W-582",
+            "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+            "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+            "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+            "page": "27-31"
+          }
+        ],
+        "reviewDecision": "PENDING",
+        "reviewerIdentity": "Automated AI Intelligence Synthesizer",
+        "reviewerRole": "SYSTEM",
+        "reviewTimestamp": "2026-09-18T18:01:05.092Z",
+        "reviewerComment": "Initial AI-generated decision support package queued for human supervisor review."
+      },
+      {
+        "auditId": "AUDIT-INC-1789754465109-O83G",
+        "insightId": "INSIGHT-INC-1789754465092-J0ZU",
+        "incidentId": "INC-01",
+        "timestampAiGeneration": "2026-09-18T18:01:05.092Z",
+        "existingIncidentRecordSummary": "Recorded incident indicates: Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway. | 17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4)",
+        "originalAiSummary": {
+          "header": "AI-generated summary",
+          "whatHappened": "Recorded incident indicates: Potential pedestrian risk: Vehicle failed to yield at degraded crosswalk while pedestrian was in roadway.",
+          "whereItOccurred": "17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4)",
+          "whenItOccurred": "@ 14.2s into video stream (Frame #426) [Capture Time: 2026-09-01T06:32:14.000Z]",
+          "relevantAvailableContext": "Plate: AP39TG2041 • Track ID: CAR-101 • 5 nearby road defect(s)"
+        },
+        "originalAiInterpretation": {
+          "suggestedAttentionLevel": "High",
+          "attentionRationale": "High attention is recommended due to potential pedestrian exposure or critical safety risk in the operational roadway.",
+          "factorsConsidered": [
+            "Source event type: PEDESTRIAN_RISK",
+            "Original recorded severity: HIGH",
+            "Geospatial coordinates (17.7362° N, 83.3268° E (Coastal Corridor NH-16 Sector 4))",
+            "5 road defect(s) logged near corridor (Defect [HIGH], Defect [MEDIUM], Defect [HIGH])",
+            "Vehicle record (AP39TG2041)",
+            "Authoritative standards: United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework, MoRTH Guidelines for Identification & Rectification of Accident Black Spots, National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors"
+          ],
+          "underlyingCauseStatement": "The underlying root cause cannot be conclusively established from this recorded incident excerpt alone.",
+          "legalLiabilityDisclaimer": "This advisory intelligence does not establish legal liability, driver fault, or statutory culpability."
+        },
+        "originalAiRecommendation": {
+          "title": "Verify Pedestrian Safety Infrastructure & Crosswalk Marking",
+          "actionText": "Dispatch field team to verify crosswalk paint reflectivity and evaluate pedestrian refuge signal timing at this intersection.",
+          "urgencyText": "Within 4-8 hours for high-footfall intersections",
+          "targetTeam": "Municipal Road Safety & Pedestrian Infrastructure Cell",
+          "isAutonomous": false,
+          "requiresHumanReview": true,
+          "disclaimer": "Advisory decision support only. Does not automatically close/delete incidents, assign legal liability, issue citations, dispatch emergency services, or authorize expenditures."
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU77XW8T-855",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8Q-558",
+            "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+            "organization": "Ministry of Road Transport and Highways (MoRTH)",
+            "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+            "page": "12-16",
+            "url": "https://morth.nic.in"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8W-582",
+            "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+            "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+            "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+            "page": "27-31"
+          }
+        ],
+        "reviewDecision": "ACCEPTED",
+        "reviewerIdentity": "Inspector K. Rao",
+        "reviewerRole": "TRAFFIC_POLICE_SUPERINTENDENT",
+        "reviewTimestamp": "2026-09-18T18:01:05.109Z",
+        "reviewerComment": "Emergency services already arrived on scene."
+      }
+    ]
+  }
+]

@@ -1,0 +1,1216 @@
+[
+  {
+    "id": "INSIGHT-DS-1789748835357-8A900",
+    "timestamp": "2026-09-18T16:27:15.357Z",
+    "inputSummary": {
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "Confidence unavailable",
+      "rawConfidence": null,
+      "rawRiskScore": null,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "Location context unavailable",
+      "cameraIdText": "Camera identifier unrecorded",
+      "durationText": "Duration unrecorded",
+      "metricsSummary": "EAR: 0.19 | PERCLOS: 28% | MAR: 0.65 | Pitch: -14° | Blink: 26 BPM"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 2,
+      "recentDriverEventsCount": 1,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence unavailable from CV model",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.19 | PERCLOS: 28% | MAR: 0.65 | Pitch: -14° | Blink: 26 BPM. Event duration: Duration unrecorded.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Accurate geolocation coordinates unavailable in current telemetry.; Optical model detection confidence score unavailable.; Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU7627K3-671-CHK-001",
+        "documentId": "DOC-KB-MU7627K3-671",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.48,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in current telemetry.",
+      "Optical model detection confidence score unavailable.",
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "reviewId": "REV-DS-1789748845388-3J4S",
+      "status": "ACCEPTED",
+      "reviewedBy": "Supervisor Rao",
+      "reviewerRole": "AUTHORITY",
+      "reviewedAt": "2026-09-18T16:27:25.388Z",
+      "reviewerComments": "Supervisor visually confirmed eyelid droop from cabin feed; driver scheduled for hydration relief.",
+      "originalAiRecommendation": {
+        "title": "Perform Supervisory Human Verification",
+        "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+        "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)"
+      }
+    },
+    "reviewHistory": [
+      {
+        "reviewId": "REV-DS-1789748845388-3J4S",
+        "status": "ACCEPTED",
+        "reviewedBy": "Supervisor Rao",
+        "reviewerRole": "AUTHORITY",
+        "reviewedAt": "2026-09-18T16:27:25.388Z",
+        "reviewerComments": "Supervisor visually confirmed eyelid droop from cabin feed; driver scheduled for hydration relief.",
+        "originalAiRecommendation": {
+          "title": "Perform Supervisory Human Verification",
+          "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+          "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)"
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-DS-1789748845388-5BR2",
+        "insightId": "INSIGHT-DS-1789748835357-8A900",
+        "busNumber": "AP 39 XX 1234",
+        "existingCvSignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "timestampAiGeneration": "2026-09-18T16:27:15.357Z",
+        "observedCvSignal": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+        "operationalContextSummary": "Route context unavailable",
+        "originalAiInterpretation": {
+          "urgency": "CAUTIONARY_MONITOR",
+          "rationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+          "underlyingCauseNotice": "The underlying cause cannot be determined from this visual signal alone."
+        },
+        "originalAiRecommendation": {
+          "title": "Perform Supervisory Human Verification",
+          "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+          "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU7627K3-671",
+            "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+            "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+            "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+            "page": "8-11"
+          }
+        ],
+        "reviewDecision": "ACCEPTED",
+        "reviewerIdentity": "Supervisor Rao",
+        "reviewerRole": "AUTHORITY",
+        "reviewTimestamp": "2026-09-18T16:27:25.388Z",
+        "reviewerComment": "Supervisor visually confirmed eyelid droop from cabin feed; driver scheduled for hydration relief."
+      }
+    ]
+  },
+  {
+    "id": "INSIGHT-DS-1789754036084-PF1B2",
+    "timestamp": "2026-09-18T17:53:56.084Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-977698",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "95%",
+      "rawConfidence": 0.95,
+      "rawRiskScore": 83,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "1.2s",
+      "metricsSummary": "EAR: 0.11 | PERCLOS: 96% | MAR: 0.85 | Pitch: -1.1° | Yaw: 0° | Blink: 1 BPM | Light: LOW_LIGHT"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 3,
+      "recentDriverEventsCount": 2,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 95%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.11 | PERCLOS: 96% | MAR: 0.85 | Pitch: -1.1° | Yaw: 0° | Blink: 1 BPM | Light: LOW_LIGHT. Event duration: 1.2s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.44,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754051106-6YTP2",
+    "timestamp": "2026-09-18T17:54:11.106Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-992541",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "95%",
+      "rawConfidence": 0.95,
+      "rawRiskScore": 64,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "1.2s",
+      "metricsSummary": "EAR: 0.19 | PERCLOS: 38% | MAR: 0.39 | Pitch: 0.5° | Yaw: -5.8° | Blink: 8 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 4,
+      "recentDriverEventsCount": 3,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 95%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.19 | PERCLOS: 38% | MAR: 0.39 | Pitch: 0.5° | Yaw: -5.8° | Blink: 8 BPM | Light: GOOD. Event duration: 1.2s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.44,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754063499-ZZFQH",
+    "timestamp": "2026-09-18T17:54:23.499Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-004921",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "95%",
+      "rawConfidence": 0.95,
+      "rawRiskScore": 62,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "1.2s",
+      "metricsSummary": "EAR: 0.22 | PERCLOS: 35% | MAR: 0.32 | Pitch: -6.6° | Yaw: -9.4° | Blink: 11 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 5,
+      "recentDriverEventsCount": 4,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 95%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.22 | PERCLOS: 35% | MAR: 0.32 | Pitch: -6.6° | Yaw: -9.4° | Blink: 11 BPM | Light: GOOD. Event duration: 1.2s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.44,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754149734-72164",
+    "timestamp": "2026-09-18T17:55:49.734Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-091127",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "95%",
+      "rawConfidence": 0.95,
+      "rawRiskScore": 73,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "1.3s",
+      "metricsSummary": "EAR: 0.21 | PERCLOS: 50% | MAR: 0.55 | Pitch: 4° | Yaw: -7.5° | Blink: 6 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 6,
+      "recentDriverEventsCount": 8,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 95%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.21 | PERCLOS: 50% | MAR: 0.55 | Pitch: 4° | Yaw: -7.5° | Blink: 6 BPM | Light: GOOD. Event duration: 1.3s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.44,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754169681-CC8RV",
+    "timestamp": "2026-09-18T17:56:09.681Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-111161",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "95%",
+      "rawConfidence": 0.95,
+      "rawRiskScore": 74,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "1.5s",
+      "metricsSummary": "EAR: 0.16 | PERCLOS: 57% | MAR: 0.56 | Pitch: 7.7° | Yaw: -3.9° | Blink: 12 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 7,
+      "recentDriverEventsCount": 9,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 95%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.16 | PERCLOS: 57% | MAR: 0.56 | Pitch: 7.7° | Yaw: -3.9° | Blink: 12 BPM | Light: GOOD. Event duration: 1.5s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.44,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754174340-ANXK1",
+    "timestamp": "2026-09-18T17:56:14.340Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-115860",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "WARNING",
+      "confidenceText": "95%",
+      "rawConfidence": 0.95,
+      "rawRiskScore": 74,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "1.5s",
+      "metricsSummary": "EAR: 0.21 | PERCLOS: 98% | MAR: 0.59 | Pitch: 9.8° | Yaw: -4.4° | Blink: 13 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 8,
+      "recentDriverEventsCount": 10,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 95%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.21 | PERCLOS: 98% | MAR: 0.59 | Pitch: 9.8° | Yaw: -4.4° | Blink: 13 BPM | Light: GOOD. Event duration: 1.5s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.44,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754186682-K5HDK",
+    "timestamp": "2026-09-18T17:56:26.682Z",
+    "inputSummary": {
+      "eventId": "EVT-DS-128170",
+      "rawEventType": "DISTRACTED_LOOKING_AWAY",
+      "displaySignal": "CV-detected lateral head pose distraction / gaze departure",
+      "severityText": "WARNING",
+      "confidenceText": "94%",
+      "rawConfidence": 0.94,
+      "rawRiskScore": 20,
+      "busNumberText": "AP 39 XX 1234",
+      "locationText": "18.1087° N, 83.4137° E",
+      "cameraIdText": "CAM-DRIVER-CABIN-01",
+      "durationText": "2.2s",
+      "metricsSummary": "EAR: 0.29 | PERCLOS: 0% | MAR: 0.58 | Pitch: 1.4° | Yaw: -34.3° | Blink: 14 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "routeInformation": "Route context unavailable",
+      "recentVehicleAlertsCount": 9,
+      "recentDriverEventsCount": 11,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor traffic telemetry unavailable",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasSpeedTelemetry": false,
+        "hasCorridorTraffic": false,
+        "hasHistoricalEvents": true
+      }
+    },
+    "interpretation": {
+      "urgency": "CAUTIONARY_MONITOR",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected lateral head pose distraction / gaze departure\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected lateral head pose distraction / gaze departure",
+        "Detection confidence: 94%",
+        "Assessed severity level: WARNING",
+        "Route context unavailable",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected lateral head pose distraction / gaze departure with available telemetry and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected lateral head pose distraction / gaze departure. Measured metrics: EAR: 0.29 | PERCLOS: 0% | MAR: 0.58 | Pitch: 1.4° | Yaw: -34.3° | Blink: 14 BPM | Light: GOOD. Event duration: 2.2s.",
+      "operationalDataAvailable": "Route and vehicle telemetry unavailable from uploaded metadata.",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected lateral head pose distraction / gaze departure\". The underlying cause cannot be determined from this visual signal alone. Moderate operational caution. The observable visual indicator warrants supervisory monitoring and verification against route conditions to maintain transit safety margins.",
+      "recommendationProduced": "Recommended action: \"Perform Supervisory Human Verification\". A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures. (Target window: Within standard operational monitoring cadence (15-30 minutes)).",
+      "informationUnavailable": "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).; Instantaneous vehicle speed telemetry unavailable.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.46,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.13,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Perform Supervisory Human Verification",
+      "actionText": "A designated transit supervisor or dispatcher should conduct a routine voice check via the cabin radio and verify current vehicle progress according to existing operational safety procedures.",
+      "urgencyText": "Within standard operational monitoring cadence (15-30 minutes)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Fleet vehicle registry match unavailable (bus number unverified against active campus roster).",
+      "Instantaneous vehicle speed telemetry unavailable.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754454098-SR2SR",
+    "timestamp": "2026-09-18T18:00:54.098Z",
+    "inputSummary": {
+      "eventId": "EV-TEST-101",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "CRITICAL",
+      "confidenceText": "92%",
+      "rawConfidence": 0.92,
+      "rawRiskScore": null,
+      "busNumberText": "CBUS-01",
+      "locationText": "Tagarapuvalasa Corridor near Anandapuram Junction",
+      "cameraIdText": "Camera identifier unrecorded",
+      "durationText": "2.8s",
+      "metricsSummary": "EAR: 0.17 | PERCLOS: 0.26% | MAR: 0.72 | Blink: 8 BPM | Light: GOOD"
+    },
+    "contextEnrichment": {
+      "matchedBus": {
+        "id": "CBUS-01",
+        "route_name": "Route 14 (Tagarapuvalasa Corridor)",
+        "driver_name": "M. Satyanarayana",
+        "speed_kmh": 42,
+        "status": "ON_ROUTE"
+      },
+      "routeInformation": "Assigned Route: Route 14 (Tagarapuvalasa Corridor) (Transit Unit AP-31-Z-9884) | Driver: M. Satyanarayana | Status: ON_ROUTE",
+      "recentVehicleAlertsCount": 0,
+      "recentDriverEventsCount": 0,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor flow normal; no active bottlenecks flagged",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": true,
+        "hasSpeedTelemetry": true,
+        "hasCorridorTraffic": true,
+        "hasHistoricalEvents": false
+      }
+    },
+    "interpretation": {
+      "urgency": "IMMEDIATE_HUMAN_VERIFICATION",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "High operational attention warranted. The existing CV system registered multiple concurrent indicator thresholds (e.g. sustained eye closure or high risk index) that suggest elevated risk during active passenger transport operation.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 92%",
+        "Assessed severity level: CRITICAL",
+        "Fleet vehicle correlation: Route 14 (Tagarapuvalasa Corridor)",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with active fleet telemetry for route \"Route 14 (Tagarapuvalasa Corridor)\" and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Measured metrics: EAR: 0.17 | PERCLOS: 0.26% | MAR: 0.72 | Blink: 8 BPM | Light: GOOD. Event duration: 2.8s.",
+      "operationalDataAvailable": "Vehicle registered as CBUS-01 on route \"Route 14 (Tagarapuvalasa Corridor)\". Current speed: 42 km/h. Correlated with 0 active alert(s) and 0 past event(s).",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. High operational attention warranted. The existing CV system registered multiple concurrent indicator thresholds (e.g. sustained eye closure or high risk index) that suggest elevated risk during active passenger transport operation.",
+      "recommendationProduced": "Recommended action: \"Prompt Immediate Human Verification & Safe Bay Check\". Transit command should immediately initiate two-way cabin voice contact with the driver to verify responsiveness. In accordance with CIRT and municipal safety protocols, consider directing the vehicle to the nearest depot or designated safe bay for a 20-minute rest pause if sustained indicators persist. (Target window: Immediate (Within 1-3 minutes of alert generation)).",
+      "informationUnavailable": "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.47,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.14,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Prompt Immediate Human Verification & Safe Bay Check",
+      "actionText": "Transit command should immediately initiate two-way cabin voice contact with the driver to verify responsiveness. In accordance with CIRT and municipal safety protocols, consider directing the vehicle to the nearest depot or designated safe bay for a 20-minute rest pause if sustained indicators persist.",
+      "urgencyText": "Immediate (Within 1-3 minutes of alert generation)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-DS-1789754456744-Q4QIQ",
+    "timestamp": "2026-09-18T18:00:56.744Z",
+    "inputSummary": {
+      "eventId": "EV-TEST-101",
+      "rawEventType": "PROLONGED_DROWSINESS",
+      "displaySignal": "CV-detected drowsiness-related visual signal (prolonged eye closure)",
+      "severityText": "CRITICAL",
+      "confidenceText": "92%",
+      "rawConfidence": 0.92,
+      "rawRiskScore": null,
+      "busNumberText": "CBUS-01",
+      "locationText": "Location context unavailable",
+      "cameraIdText": "Camera identifier unrecorded",
+      "durationText": "Duration unrecorded"
+    },
+    "contextEnrichment": {
+      "matchedBus": {
+        "id": "CBUS-01",
+        "route_name": "Route 14 (Tagarapuvalasa Corridor)",
+        "driver_name": "M. Satyanarayana",
+        "speed_kmh": 42,
+        "status": "ON_ROUTE"
+      },
+      "routeInformation": "Assigned Route: Route 14 (Tagarapuvalasa Corridor) (Transit Unit AP-31-Z-9884) | Driver: M. Satyanarayana | Status: ON_ROUTE",
+      "recentVehicleAlertsCount": 0,
+      "recentDriverEventsCount": 0,
+      "recentCriticalEventsCount": 0,
+      "corridorTrafficCongestion": "Corridor flow normal; no active bottlenecks flagged",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temperature (RED_SEVERE)",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": true,
+        "hasSpeedTelemetry": true,
+        "hasCorridorTraffic": true,
+        "hasHistoricalEvents": false
+      }
+    },
+    "interpretation": {
+      "urgency": "IMMEDIATE_HUMAN_VERIFICATION",
+      "observableSignalDescription": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\".",
+      "underlyingCauseStatement": "The underlying cause cannot be determined from this visual signal alone.",
+      "interpretationRationale": "High operational attention warranted. The existing CV system registered multiple concurrent indicator thresholds (e.g. sustained eye closure or high risk index) that suggest elevated risk during active passenger transport operation.",
+      "factorsConsidered": [
+        "Existing CV signal: CV-detected drowsiness-related visual signal (prolonged eye closure)",
+        "Detection confidence: 92%",
+        "Assessed severity level: CRITICAL",
+        "Fleet vehicle correlation: Route 14 (Tagarapuvalasa Corridor)",
+        "Authoritative standard correlation: Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard (Central Institute of Road Transport (CIRT) & NHTSA Guidelines)"
+      ],
+      "safeguardDisclaimer": "Safeguard Notice: This system does not produce medical, neurological, psychological, sleep disorder, or intoxication diagnoses. Potential contributing factors such as prolonged screen exposure, sleep deprivation, medication, or illness must not be asserted from optical camera telemetry alone."
+    },
+    "whyThisResult": {
+      "summary": "The system synthesized the optical CV detection of CV-detected drowsiness-related visual signal (prolonged eye closure) with active fleet telemetry for route \"Route 14 (Tagarapuvalasa Corridor)\" and authoritative transport safety guidelines from Central Institute of Road Transport (CIRT) & NHTSA Guidelines.",
+      "observedCvCharacteristics": "CV detected CV-detected drowsiness-related visual signal (prolonged eye closure). Duration: Duration unrecorded.",
+      "operationalDataAvailable": "Vehicle registered as CBUS-01 on route \"Route 14 (Tagarapuvalasa Corridor)\". Current speed: 42 km/h. Correlated with 0 active alert(s) and 0 past event(s).",
+      "ragEvidenceRetrieved": "Retrieved standard: \"Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard\" (Central Institute of Road Transport (CIRT) & NHTSA Guidelines, Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations). Standard specifies objective thresholds (e.g., PERCLOS / continuous shift limits) and recommended depot rest intervals.",
+      "aiInterpreted": "The existing computer vision system observed a visual pattern matching \"CV-detected drowsiness-related visual signal (prolonged eye closure)\". The underlying cause cannot be determined from this visual signal alone. High operational attention warranted. The existing CV system registered multiple concurrent indicator thresholds (e.g. sustained eye closure or high risk index) that suggest elevated risk during active passenger transport operation.",
+      "recommendationProduced": "Recommended action: \"Prompt Immediate Human Verification & Safe Bay Check\". Transit command should immediately initiate two-way cabin voice contact with the driver to verify responsiveness. In accordance with CIRT and municipal safety protocols, consider directing the vehicle to the nearest depot or designated safe bay for a 20-minute rest pause if sustained indicators persist. (Target window: Immediate (Within 1-3 minutes of alert generation)).",
+      "informationUnavailable": "Accurate geolocation coordinates unavailable in current telemetry.; Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8Q-483-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Q-483",
+        "documentTitle": "Commercial Motor Vehicle Driver Fatigue & Drowsiness Mitigation Standard",
+        "organization": "Central Institute of Road Transport (CIRT) & NHTSA Guidelines",
+        "category": "DRIVER_SAFETY",
+        "section": "Section 3: Ocular Metric Monitoring (PERCLOS), Head Nodding and Alert Escalations",
+        "page": "8-11",
+        "source": "Public Transport Safety Advisory Circular CIRT/SAFETY/2021-09",
+        "similarityScore": 0.47,
+        "text": "Driver drowsiness and inattention contribute to over 38% of heavy transit bus collisions during nocturnal and early morning operation. Automated Computer Vision and Telematics Thresholds: - PERCLOS (Percentage of Eye Closure over time): Defined as the proportion of time in a 60-second window that the eyelids cover 80% or more of the pupil. A PERCLOS score exceeding 0.15 (15%) indicates moderate drowsiness; a PERCLOS exceeding 0.22 (22%) is classified as CRITICAL drowsy micro-sleep. - Eye Aspect Ratio (EAR): An EAR falling below 0.20 for more than 1.5 continuous seconds indicates active eye closure / drowsy episode. - Mouth Aspect Ratio (MAR): An MAR exceeding 0.65 sustained for >2.5 seconds indicates involuntary yawning and respiratory fatigue. Mandatory Remediation Protocol: Upon detection of two consecutive CRITICAL alerts within a 10-minute window, the telematics system must trigger in-cabin acoustic alert (85 dB pulsating buzzer) and notify the central transit control depot. The driver must be routed to the nearest designated depot or safe bay for a mandatory 20-minute rest interval. Continuous shifts must not exceed 4.5 hours without a minimum 30-minute rest."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.14,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport and driver safety frameworks (CIRT / NHTSA / MoRTH).",
+    "recommendedAction": {
+      "title": "Prompt Immediate Human Verification & Safe Bay Check",
+      "actionText": "Transit command should immediately initiate two-way cabin voice contact with the driver to verify responsiveness. In accordance with CIRT and municipal safety protocols, consider directing the vehicle to the nearest depot or designated safe bay for a 20-minute rest pause if sustained indicators persist.",
+      "urgencyText": "Immediate (Within 1-3 minutes of alert generation)",
+      "isAutonomous": false,
+      "requiresHumanReview": true,
+      "disclaimer": "This decision support recommendation does not automatically terminate employment, penalize the driver, accuse the driver of misconduct, or assign legal liability."
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in current telemetry.",
+      "Driver physiological baseline, shift duration prior to event, and external cabin ambient noise are unrecorded."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI safety insight provides automated advisory decision support for human dispatchers and transit supervisors. It does not replace professional judgment or statutory regulations.",
+      "Strict Prohibition on Medical & Disciplinary Conclusions: The system does not diagnose medical conditions, sleep disorders, or intoxication, and must not be used to automatically penalize drivers, accuse drivers of misconduct, or assign legal liability.",
+      "Human Review Mandatory: All subsequent actions—such as dispatching a relief driver, routing to a rest bay, or scheduling vehicle maintenance—require human verification by authorized transit personnel.",
+      "Sensor & Environmental Variability: Optical facial landmark analysis can be affected by ambient cabin lighting, deep shadows, sun glare, driver sunglasses, or camera angle misalignment.",
+      "Knowledge Base Grounding: Normative recommendations are derived from indexed safety standards (CIRT / NHTSA / MoRTH) and must be applied in accordance with current local municipal operating procedures."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Safe, accessible, and sustainable public transport systems for all",
+      "contributionNote": "This Driver Safety AI Intelligence layer is designed to support safer public transport operations by alerting dispatchers to potential fatigue patterns, contributing to municipal passenger safety and accident prevention."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  }
+]

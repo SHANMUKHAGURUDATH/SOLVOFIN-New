@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #0a0d14;
+    border-radius: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+  }
+  
+  .bg-grid-pattern {
+    background-image: radial-gradient(rgba(51, 65, 85, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .bg-dense-grid {
+    background-image: linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background-color: #0a0d14;
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background-color: #0f172a;
+}

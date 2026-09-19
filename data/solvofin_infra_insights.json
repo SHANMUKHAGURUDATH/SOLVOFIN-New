@@ -1,0 +1,1212 @@
+[
+  {
+    "id": "INSIGHT-1789746134719-0CBSR",
+    "timestamp": "2026-09-18T15:42:14.719Z",
+    "inputSummary": {
+      "detectedIssue": "Damaged Passenger Seat",
+      "componentCategory": "SEATING",
+      "locationText": "Maddilapalem Transit Corridor",
+      "confidenceText": "88%",
+      "rawConfidence": 0.88,
+      "rawSeverity": "MODERATE",
+      "busNumber": "AP 39 XX 1234",
+      "bbox": [
+        20,
+        30,
+        45,
+        60
+      ]
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "corridorInformation": "Corridor telemetry unavailable",
+      "historicalDefectsCount": 3,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "MODERATE",
+      "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard.",
+      "factorsConsidered": [
+        "Computer Vision classification: Damaged Passenger Seat (MODERATE)",
+        "Detection model confidence: 88%",
+        "Component category: SEATING",
+        "Transit fleet assignment: unverified/general",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a Damaged Passenger Seat on component category SEATING. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision identified a localized anomaly in bounding coordinates [20, 30, 45, 60]% with optical characteristics matching Damaged Passenger Seat.",
+      "contextualFactors": "Vehicle route correlation unavailable from provided metadata. No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for seating components.",
+      "missingInformationNotes": "Structural sub-surface material fatigue cannot be measured via single 2D optical frame; physical tactile inspection recommended."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU742EQI-702-CHK-001",
+        "documentId": "DOC-KB-MU742EQI-702",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.37,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Schedule Depot Mechanical Inspection",
+      "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+      "urgencyText": "Within standard maintenance window (48-72 hours)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Fleet vehicle registry cross-reference unavailable (bus number not matched to active campus roster).",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators in proactive bus and road safety compliance, reducing transit downtime and improving passenger safety."
+    },
+    "humanReview": {
+      "status": "ACCEPTED",
+      "reviewedBy": "Senior Depot Engineer K. Prasad",
+      "reviewerRole": "AUTHORITY",
+      "reviewedAt": "2026-09-18T15:42:21.113Z",
+      "reviewerComments": "Inspected seat upholstery; scheduled for reupholstery during depot overhaul."
+    }
+  },
+  {
+    "id": "INSIGHT-1789746137926-4SCWS",
+    "timestamp": "2026-09-18T15:42:17.926Z",
+    "inputSummary": {
+      "detectedIssue": "Unclassified Floor Surface Wear",
+      "componentCategory": "FLOORING",
+      "locationText": "Location unavailable",
+      "confidenceText": "Confidence unavailable",
+      "rawConfidence": null,
+      "rawSeverity": "LOW"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "corridorInformation": "Corridor telemetry unavailable",
+      "historicalDefectsCount": 0,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": false,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "LOW",
+      "rationale": "Low operational urgency. The condition is cosmetic or within normal operational wear-and-tear thresholds.",
+      "factorsConsidered": [
+        "Computer Vision classification: Unclassified Floor Surface Wear (LOW)",
+        "Detection confidence unavailable from optical model",
+        "Component category: FLOORING",
+        "Transit fleet assignment: unverified/general",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a Unclassified Floor Surface Wear on component category FLOORING. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision detected structural surface variation corresponding to Unclassified Floor Surface Wear in the provided inspection frame.",
+      "contextualFactors": "Vehicle route correlation unavailable from provided metadata. No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for flooring components.",
+      "missingInformationNotes": "Physical GPS coordinates were not embedded in the uploaded frame. Maintenance crew will require depot gate verification."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU742EQI-702-CHK-001",
+        "documentId": "DOC-KB-MU742EQI-702",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.29,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      },
+      {
+        "chunkId": "DOC-KB-MU742EQJ-958-CHK-001",
+        "documentId": "DOC-KB-MU742EQJ-958",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.09,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      },
+      {
+        "chunkId": "DOC-KB-MU742EQM-985-CHK-001",
+        "documentId": "DOC-KB-MU742EQM-985",
+        "documentTitle": "National Urban Transport Policy (NUTP) Guidelines on Traffic Bottlenecks & Corridors",
+        "organization": "Ministry of Housing and Urban Affairs (MoHUA)",
+        "category": "URBAN_MOBILITY",
+        "section": "Section 6: Corridor Bottleneck Remediation, Signal Optimization and Public Transit Priority",
+        "page": "27-31",
+        "source": "Government of India Urban Mobility Framework",
+        "similarityScore": 0.08,
+        "text": "Urban traffic congestion not only inflates commuter transit delays but drastically degrades air quality and increases crash probability near chokepoints. Key Remediation Strategies for Identified Bottlenecks: 1. Queue Spillback Prevention: Signal timing offsets must be synchronized dynamically based on queue length detected at downstream intersections to prevent gridlock. 2. Geometric Optimization: Removal of visual and physical bottlenecks—such as illegal street parking within 50m of intersections, poorly positioned bus stops that block through-lanes, and abrupt road narrowing. 3. Dedicated Transit Lanes: On corridors with bus volumes exceeding 30 buses/hour during peak periods, dedicated curb-side or median bus lanes should be demarcated with distinct colorized surfacing and camera enforcement to maintain public transit headways and reliability."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Log for Routine Preventive Servicing",
+      "actionText": "Record observation in fleet maintenance history for review during standard bi-weekly preventative servicing.",
+      "urgencyText": "Routine maintenance window (7-14 days)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in media metadata.",
+      "Optical model detection confidence score unavailable.",
+      "Fleet vehicle registry cross-reference unavailable (bus number not matched to active campus roster).",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators in proactive bus and road safety compliance, reducing transit downtime and improving passenger safety."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    }
+  },
+  {
+    "id": "INSIGHT-1789754424648-WMRT6",
+    "timestamp": "2026-09-18T18:00:24.648Z",
+    "inputSummary": {
+      "defectId": "DEF-01",
+      "detectedIssue": "POTHOLE",
+      "componentCategory": "ROAD_SURFACE",
+      "locationText": "Location unavailable",
+      "confidenceText": "94%",
+      "rawConfidence": 0.94,
+      "rawSeverity": "HIGH",
+      "busNumber": "CBUS-01"
+    },
+    "contextEnrichment": {
+      "matchedBus": {
+        "id": "CBUS-01",
+        "route_name": "Route 14 (Tagarapuvalasa Corridor)",
+        "speed_kmh": 42,
+        "status": "ON_ROUTE"
+      },
+      "corridorInformation": "Active Route: Route 14 (Tagarapuvalasa Corridor) (Fleet Unit CBUS-01)",
+      "historicalDefectsCount": 0,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": true,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "MODERATE",
+      "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard.",
+      "factorsConsidered": [
+        "Computer Vision classification: POTHOLE (HIGH)",
+        "Detection model confidence: 94%",
+        "Component category: ROAD_SURFACE",
+        "Transit vehicle match: Route 14 (Tagarapuvalasa Corridor)",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a POTHOLE on component category ROAD_SURFACE. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision detected structural surface variation corresponding to POTHOLE in the provided inspection frame.",
+      "contextualFactors": "Correlated with fleet unit CBUS-01 on route \"Route 14 (Tagarapuvalasa Corridor)\". No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for road_surface components.",
+      "missingInformationNotes": "Physical GPS coordinates were not embedded in the uploaded frame. Maintenance crew will require depot gate verification."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8R-142-CHK-001",
+        "documentId": "DOC-KB-MU77XW8R-142",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.17,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8T-855-CHK-001",
+        "documentId": "DOC-KB-MU77XW8T-855",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.14,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.1,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Schedule Depot Mechanical Inspection",
+      "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+      "urgencyText": "Within standard maintenance window (48-72 hours)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in media metadata.",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators with public-transit safety reference indicators, reducing transit downtime and providing operational decision guidance without implying statutory compliance."
+    },
+    "humanReview": {
+      "reviewId": "REV-1789754424663-UV4T",
+      "status": "ACCEPTED",
+      "reviewedBy": "Er. Ramesh Kumar",
+      "reviewerRole": "SUPERINTENDENT_ENGINEER",
+      "reviewedAt": "2026-09-18T18:00:24.663Z",
+      "reviewerComments": "Verified by road inspection superintendent on site.",
+      "actionTaken": "Dispatched hot-mix repair crew",
+      "originalAiRecommendation": {
+        "title": "Schedule Depot Mechanical Inspection",
+        "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+        "urgencyText": "Within standard maintenance window (48-72 hours)"
+      }
+    },
+    "reviewHistory": [
+      {
+        "reviewId": "REV-1789754424663-UV4T",
+        "status": "ACCEPTED",
+        "reviewedBy": "Er. Ramesh Kumar",
+        "reviewerRole": "SUPERINTENDENT_ENGINEER",
+        "reviewedAt": "2026-09-18T18:00:24.663Z",
+        "reviewerComments": "Verified by road inspection superintendent on site.",
+        "actionTaken": "Dispatched hot-mix repair crew",
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-1789754424663-7WMG",
+        "insightId": "INSIGHT-1789754424648-WMRT6",
+        "detectionId": "DEF-01",
+        "defectType": "POTHOLE",
+        "componentCategory": "ROAD_SURFACE",
+        "location": "Location unavailable",
+        "busNumber": "CBUS-01",
+        "timestampAiGeneration": "2026-09-18T18:00:24.648Z",
+        "originalAiInterpretation": {
+          "level": "MODERATE",
+          "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard."
+        },
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU77XW8R-142",
+            "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+            "organization": "United Nations Economic Commission for Europe (UNECE)",
+            "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+            "page": "42-51",
+            "url": "https://unece.org/transport/vehicle-regulations"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8T-855",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8Z-839",
+            "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+            "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+            "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+            "page": "14-22",
+            "url": "https://morth.nic.in/intelligent-transportation-systems"
+          }
+        ],
+        "reviewDecision": "ACCEPTED",
+        "reviewerIdentity": "Er. Ramesh Kumar",
+        "reviewerRole": "SUPERINTENDENT_ENGINEER",
+        "reviewTimestamp": "2026-09-18T18:00:24.663Z",
+        "reviewerComment": "Verified by road inspection superintendent on site."
+      }
+    ]
+  },
+  {
+    "id": "INSIGHT-1789754436293-0NZ3M",
+    "timestamp": "2026-09-18T18:00:36.293Z",
+    "inputSummary": {
+      "defectId": "DEF-02",
+      "detectedIssue": "CRACK",
+      "componentCategory": "ROAD_SURFACE",
+      "locationText": "Location unavailable",
+      "confidenceText": "88%",
+      "rawConfidence": 0.88,
+      "rawSeverity": "MEDIUM"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "corridorInformation": "Corridor telemetry unavailable",
+      "historicalDefectsCount": 0,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": false,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "MODERATE",
+      "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard.",
+      "factorsConsidered": [
+        "Computer Vision classification: CRACK (MEDIUM)",
+        "Detection model confidence: 88%",
+        "Component category: ROAD_SURFACE",
+        "Transit fleet assignment: unverified/general",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a CRACK on component category ROAD_SURFACE. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision detected structural surface variation corresponding to CRACK in the provided inspection frame.",
+      "contextualFactors": "Vehicle route correlation unavailable from provided metadata. No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for road_surface components.",
+      "missingInformationNotes": "Physical GPS coordinates were not embedded in the uploaded frame. Maintenance crew will require depot gate verification."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU77XW8R-142-CHK-001",
+        "documentId": "DOC-KB-MU77XW8R-142",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.17,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8T-855-CHK-001",
+        "documentId": "DOC-KB-MU77XW8T-855",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.14,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      },
+      {
+        "chunkId": "DOC-KB-MU77XW8Z-839-CHK-001",
+        "documentId": "DOC-KB-MU77XW8Z-839",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.1,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Schedule Depot Mechanical Inspection",
+      "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+      "urgencyText": "Within standard maintenance window (48-72 hours)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in media metadata.",
+      "Fleet vehicle registry cross-reference unavailable (bus number not matched to active campus roster).",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators with public-transit safety reference indicators, reducing transit downtime and providing operational decision guidance without implying statutory compliance."
+    },
+    "humanReview": {
+      "reviewId": "REV-1789754436313-9SGQ",
+      "status": "REJECTED",
+      "reviewedBy": "Chief Inspector Verma",
+      "reviewerRole": "CHIEF_ENGINEER",
+      "reviewedAt": "2026-09-18T18:00:36.313Z",
+      "reviewerComments": "False alarm: Surface stain, not structural crack.",
+      "originalAiRecommendation": {
+        "title": "Schedule Depot Mechanical Inspection",
+        "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+        "urgencyText": "Within standard maintenance window (48-72 hours)"
+      }
+    },
+    "reviewHistory": [
+      {
+        "reviewId": "REV-1789754436308-FTQM",
+        "status": "MODIFIED",
+        "reviewedBy": "Er. Ramesh Kumar",
+        "reviewerRole": "SUPERINTENDENT_ENGINEER",
+        "reviewedAt": "2026-09-18T18:00:36.308Z",
+        "reviewerComments": "Crack requires sealing before monsoon.",
+        "modifiedRecommendation": "Apply polyurethane crack sealant within 7 days instead of routine resurfacing.",
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        }
+      },
+      {
+        "reviewId": "REV-1789754436313-9SGQ",
+        "status": "REJECTED",
+        "reviewedBy": "Chief Inspector Verma",
+        "reviewerRole": "CHIEF_ENGINEER",
+        "reviewedAt": "2026-09-18T18:00:36.313Z",
+        "reviewerComments": "False alarm: Surface stain, not structural crack.",
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-1789754436308-XQ3X",
+        "insightId": "INSIGHT-1789754436293-0NZ3M",
+        "detectionId": "DEF-02",
+        "defectType": "CRACK",
+        "componentCategory": "ROAD_SURFACE",
+        "location": "Location unavailable",
+        "timestampAiGeneration": "2026-09-18T18:00:36.293Z",
+        "originalAiInterpretation": {
+          "level": "MODERATE",
+          "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard."
+        },
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU77XW8R-142",
+            "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+            "organization": "United Nations Economic Commission for Europe (UNECE)",
+            "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+            "page": "42-51",
+            "url": "https://unece.org/transport/vehicle-regulations"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8T-855",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8Z-839",
+            "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+            "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+            "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+            "page": "14-22",
+            "url": "https://morth.nic.in/intelligent-transportation-systems"
+          }
+        ],
+        "reviewDecision": "MODIFIED",
+        "modifiedRecommendation": "Apply polyurethane crack sealant within 7 days instead of routine resurfacing.",
+        "reviewerIdentity": "Er. Ramesh Kumar",
+        "reviewerRole": "SUPERINTENDENT_ENGINEER",
+        "reviewTimestamp": "2026-09-18T18:00:36.308Z",
+        "reviewerComment": "Crack requires sealing before monsoon."
+      },
+      {
+        "auditId": "AUDIT-1789754436313-9YVH",
+        "insightId": "INSIGHT-1789754436293-0NZ3M",
+        "detectionId": "DEF-02",
+        "defectType": "CRACK",
+        "componentCategory": "ROAD_SURFACE",
+        "location": "Location unavailable",
+        "timestampAiGeneration": "2026-09-18T18:00:36.293Z",
+        "originalAiInterpretation": {
+          "level": "MODERATE",
+          "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard."
+        },
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU77XW8R-142",
+            "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+            "organization": "United Nations Economic Commission for Europe (UNECE)",
+            "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+            "page": "42-51",
+            "url": "https://unece.org/transport/vehicle-regulations"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8T-855",
+            "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+            "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+            "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+            "page": "Clause 11.2.1",
+            "url": "https://sdgs.un.org/goals/goal11"
+          },
+          {
+            "documentId": "DOC-KB-MU77XW8Z-839",
+            "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+            "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+            "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+            "page": "14-22",
+            "url": "https://morth.nic.in/intelligent-transportation-systems"
+          }
+        ],
+        "reviewDecision": "REJECTED",
+        "reviewerIdentity": "Chief Inspector Verma",
+        "reviewerRole": "CHIEF_ENGINEER",
+        "reviewTimestamp": "2026-09-18T18:00:36.313Z",
+        "reviewerComment": "False alarm: Surface stain, not structural crack."
+      }
+    ]
+  },
+  {
+    "id": "INSIGHT-1789802503290-FUHYX",
+    "timestamp": "2026-09-19T07:21:43.290Z",
+    "inputSummary": {
+      "detectedIssue": "POTHOLE",
+      "componentCategory": "GENERAL_INFRASTRUCTURE",
+      "locationText": "Location unavailable",
+      "confidenceText": "94%",
+      "rawConfidence": 0.94,
+      "rawSeverity": "MODERATE"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "corridorInformation": "Corridor telemetry unavailable",
+      "historicalDefectsCount": 0,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": false,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "MODERATE",
+      "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard.",
+      "factorsConsidered": [
+        "Computer Vision classification: POTHOLE (MODERATE)",
+        "Detection model confidence: 94%",
+        "Component category: GENERAL_INFRASTRUCTURE",
+        "Transit fleet assignment: unverified/general",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a POTHOLE on component category GENERAL_INFRASTRUCTURE. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision detected structural surface variation corresponding to POTHOLE in the provided inspection frame.",
+      "contextualFactors": "Vehicle route correlation unavailable from provided metadata. No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for general_infrastructure components.",
+      "missingInformationNotes": "Physical GPS coordinates were not embedded in the uploaded frame. Maintenance crew will require depot gate verification."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU823JXL-304-CHK-001",
+        "documentId": "DOC-KB-MU823JXL-304",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.15,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      },
+      {
+        "chunkId": "DOC-KB-MU823JXK-781-CHK-001",
+        "documentId": "DOC-KB-MU823JXK-781",
+        "documentTitle": "MoRTH Guidelines for Identification & Rectification of Accident Black Spots",
+        "organization": "Ministry of Road Transport and Highways (MoRTH)",
+        "category": "ROAD_SAFETY",
+        "section": "Section 5: Black Spot Prioritization Criteria and Engineering Countermeasures",
+        "page": "12-16",
+        "source": "Government of India Transport Planning Circular RW/NH-15017/47/2018-P&M",
+        "url": "https://morth.nic.in",
+        "similarityScore": 0.14,
+        "text": "A road accident black spot is defined as a road stretch of about 500 meters along which either 5 road accidents involving serious injuries/fatalities or 10 fatalities occurred during the last 3 calendar years. Prioritization for Immediate Engineering Remediation: 1. Hazardous Surface Irregularities: Severe pavement drop-offs (>50mm), recurrent deep potholes in deceleration zones, and polished aggregates causing skidding. 2. Visibility and Crosswalk Safety: Faded or unilluminated zebra crossings near schools and transit stations require retroreflective thermoplastic markings (minimum 2.5mm thickness with Type-II glass beads) and advance rumble strips. 3. Geometric Interventions: Rectification of abrupt lane drop-offs and damaged central median dividers. Where median openings are unofficial or broken, precast concrete New Jersey barriers or steel W-beam crash barriers conforming to IRC:119-2015 must be erected to eliminate illegal U-turns and erratic zig-zag maneuvers."
+      },
+      {
+        "chunkId": "DOC-KB-MU823JXI-945-CHK-001",
+        "documentId": "DOC-KB-MU823JXI-945",
+        "documentTitle": "IRC:82-2015 Code of Practice for Maintenance of Bituminous Roads",
+        "organization": "Indian Roads Congress (IRC)",
+        "category": "INFRASTRUCTURE",
+        "section": "Chapter 4: Distress Identification, Classification & Severity Rating of Potholes and Cracking",
+        "page": "18-24",
+        "source": "IRC Publications / Ministry of Road Transport and Highways (MoRTH)",
+        "url": "https://irc.nic.in",
+        "similarityScore": 0.14,
+        "text": "Potholes are bowl-shaped depressions of variable size in the pavement surface resulting from the loss of surface and base course materials. Under IRC:82-2015, potholes are classified by depth and area: - Low Severity: Depth less than 25 mm, area less than 0.1 sq.m. - Moderate Severity: Depth between 25 mm and 50 mm, or area between 0.1 and 0.5 sq.m. - High Severity / Critical: Depth greater than 50 mm, or area exceeding 0.5 sq.m, posing immediate structural and vehicular hazard. Repair Protocol: High severity potholes require squaring of edges to vertical faces, thorough cleaning of debris and moisture, application of tack coat (rapid setting bitumen emulsion RS-1 at 0.25 kg/sq.m), followed by filling with dense bituminous macadam (DBM) or bituminous concrete (BC) compacted in layers not exceeding 50 mm. For emergency monsoonal maintenance, cold-mix patching materials using cationic bitumen emulsions meeting IS:8887 standards shall be deployed within 24 hours to prevent base course saturation and edge collapse."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Schedule Depot Mechanical Inspection",
+      "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+      "urgencyText": "Within standard maintenance window (48-72 hours)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in media metadata.",
+      "Fleet vehicle registry cross-reference unavailable (bus number not matched to active campus roster).",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators with public-transit safety reference indicators, reducing transit downtime and providing operational decision guidance without implying statutory compliance."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  },
+  {
+    "id": "INSIGHT-1789802517364-ZVLTB",
+    "timestamp": "2026-09-19T07:21:57.364Z",
+    "inputSummary": {
+      "detectedIssue": "CRACK",
+      "componentCategory": "GENERAL_INFRASTRUCTURE",
+      "locationText": "Location unavailable",
+      "confidenceText": "89%",
+      "rawConfidence": 0.89,
+      "rawSeverity": "MODERATE"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "corridorInformation": "Corridor telemetry unavailable",
+      "historicalDefectsCount": 0,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": false,
+        "hasFleetTelemetry": false,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "MODERATE",
+      "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard.",
+      "factorsConsidered": [
+        "Computer Vision classification: CRACK (MODERATE)",
+        "Detection model confidence: 89%",
+        "Component category: GENERAL_INFRASTRUCTURE",
+        "Transit fleet assignment: unverified/general",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a CRACK on component category GENERAL_INFRASTRUCTURE. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision detected structural surface variation corresponding to CRACK in the provided inspection frame.",
+      "contextualFactors": "Vehicle route correlation unavailable from provided metadata. No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for general_infrastructure components.",
+      "missingInformationNotes": "Physical GPS coordinates were not embedded in the uploaded frame. Maintenance crew will require depot gate verification."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU823JXL-304-CHK-001",
+        "documentId": "DOC-KB-MU823JXL-304",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.17,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      },
+      {
+        "chunkId": "DOC-KB-MU823JXZ-790-CHK-001",
+        "documentId": "DOC-KB-MU823JXZ-790",
+        "documentTitle": "IRC:SP:84-2019 Manual of Specifications and Standards for Four Laning of Highways",
+        "organization": "Indian Roads Congress (IRC)",
+        "category": "INFRASTRUCTURE",
+        "section": "Section 9 & 12: Pavement Performance Standards, Surface Roughness & Remedial Interventions",
+        "page": "68-74",
+        "source": "Indian Roads Congress Special Publication IRC:SP:84-2019",
+        "url": "https://irc.nic.in",
+        "similarityScore": 0.1,
+        "text": "IRC:SP:84-2019 sets technical benchmarks for high-density arterial highways and urban transit corridors: 1. Pavement Surface Integrity: The pavement surface must remain free from structural distress. Any localized defect such as potholes, ravelling, or depressions deeper than 40 mm constitutes a Category-A hazard requiring temporary leveling within 24 hours and permanent hot/cold mix compaction within 48 hours. 2. International Roughness Index (IRI): Operating lane roughness shall not exceed 2,500 mm/km. Sections with IRI exceeding 3,000 mm/km require diagnostic surface profiling and micro-surfacing or thin bituminous overlay (BC). 3. Bus Transit Corridors & Stops: Section 12 mandates designated bus bays with high-friction skid-resistant surfacing (minimum Skid Resistance Value SRV of 55). Advanced rumble strip markings must precede transit bus stops and pedestrian crossings by 60 to 90 meters. 4. Median Barriers & Anti-Glare Screens: To prevent dangerous zig-zag swerves and unauthorized lane crossings, continuous precast concrete crash barriers (W-beam or New Jersey profile) must be maintained at all median points outside designated intersection turning slots."
+      },
+      {
+        "chunkId": "DOC-KB-MU823JXV-365-CHK-001",
+        "documentId": "DOC-KB-MU823JXV-365",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.09,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Schedule Depot Mechanical Inspection",
+      "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+      "urgencyText": "Within standard maintenance window (48-72 hours)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Accurate geolocation coordinates unavailable in media metadata.",
+      "Fleet vehicle registry cross-reference unavailable (bus number not matched to active campus roster).",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators with public-transit safety reference indicators, reducing transit downtime and providing operational decision guidance without implying statutory compliance."
+    },
+    "humanReview": {
+      "reviewId": "REV-1789802517428-ZR0G",
+      "status": "REJECTED",
+      "reviewedBy": "Auditor V. Naidu",
+      "reviewerRole": "QUALITY_AUDITOR",
+      "reviewedAt": "2026-09-19T07:21:57.428Z",
+      "reviewerComments": "False positive shadow from tree",
+      "originalAiRecommendation": {
+        "title": "Schedule Depot Mechanical Inspection",
+        "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+        "urgencyText": "Within standard maintenance window (48-72 hours)"
+      }
+    },
+    "reviewHistory": [
+      {
+        "reviewId": "REV-1789802517391-LQ65",
+        "status": "ACCEPTED",
+        "reviewedBy": "Eng. Sharma",
+        "reviewerRole": "SUPERVISOR",
+        "reviewedAt": "2026-09-19T07:21:57.391Z",
+        "reviewerComments": "Approved for repair",
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        }
+      },
+      {
+        "reviewId": "REV-1789802517409-O5HA",
+        "status": "MODIFIED",
+        "reviewedBy": "Chief Eng. Rao",
+        "reviewerRole": "DIRECTOR",
+        "reviewedAt": "2026-09-19T07:21:57.409Z",
+        "reviewerComments": "Upgraded to priority 1 due to school zone",
+        "modifiedRecommendation": "Deploy rapid sealant within 12h",
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        }
+      },
+      {
+        "reviewId": "REV-1789802517428-ZR0G",
+        "status": "REJECTED",
+        "reviewedBy": "Auditor V. Naidu",
+        "reviewerRole": "QUALITY_AUDITOR",
+        "reviewedAt": "2026-09-19T07:21:57.428Z",
+        "reviewerComments": "False positive shadow from tree",
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        }
+      }
+    ],
+    "auditTrail": [
+      {
+        "auditId": "AUDIT-1789802517391-HTVK",
+        "insightId": "INSIGHT-1789802517364-ZVLTB",
+        "defectType": "CRACK",
+        "componentCategory": "GENERAL_INFRASTRUCTURE",
+        "location": "Location unavailable",
+        "timestampAiGeneration": "2026-09-19T07:21:57.364Z",
+        "originalAiInterpretation": {
+          "level": "MODERATE",
+          "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard."
+        },
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU823JXL-304",
+            "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+            "organization": "United Nations Economic Commission for Europe (UNECE)",
+            "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+            "page": "42-51",
+            "url": "https://unece.org/transport/vehicle-regulations"
+          },
+          {
+            "documentId": "DOC-KB-MU823JXZ-790",
+            "documentTitle": "IRC:SP:84-2019 Manual of Specifications and Standards for Four Laning of Highways",
+            "organization": "Indian Roads Congress (IRC)",
+            "section": "Section 9 & 12: Pavement Performance Standards, Surface Roughness & Remedial Interventions",
+            "page": "68-74",
+            "url": "https://irc.nic.in"
+          },
+          {
+            "documentId": "DOC-KB-MU823JXV-365",
+            "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+            "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+            "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+            "page": "14-22",
+            "url": "https://morth.nic.in/intelligent-transportation-systems"
+          }
+        ],
+        "reviewDecision": "ACCEPTED",
+        "reviewerIdentity": "Eng. Sharma",
+        "reviewerRole": "SUPERVISOR",
+        "reviewTimestamp": "2026-09-19T07:21:57.391Z",
+        "reviewerComment": "Approved for repair"
+      },
+      {
+        "auditId": "AUDIT-1789802517409-QCRM",
+        "insightId": "INSIGHT-1789802517364-ZVLTB",
+        "defectType": "CRACK",
+        "componentCategory": "GENERAL_INFRASTRUCTURE",
+        "location": "Location unavailable",
+        "timestampAiGeneration": "2026-09-19T07:21:57.364Z",
+        "originalAiInterpretation": {
+          "level": "MODERATE",
+          "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard."
+        },
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU823JXL-304",
+            "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+            "organization": "United Nations Economic Commission for Europe (UNECE)",
+            "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+            "page": "42-51",
+            "url": "https://unece.org/transport/vehicle-regulations"
+          },
+          {
+            "documentId": "DOC-KB-MU823JXZ-790",
+            "documentTitle": "IRC:SP:84-2019 Manual of Specifications and Standards for Four Laning of Highways",
+            "organization": "Indian Roads Congress (IRC)",
+            "section": "Section 9 & 12: Pavement Performance Standards, Surface Roughness & Remedial Interventions",
+            "page": "68-74",
+            "url": "https://irc.nic.in"
+          },
+          {
+            "documentId": "DOC-KB-MU823JXV-365",
+            "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+            "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+            "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+            "page": "14-22",
+            "url": "https://morth.nic.in/intelligent-transportation-systems"
+          }
+        ],
+        "reviewDecision": "MODIFIED",
+        "modifiedRecommendation": "Deploy rapid sealant within 12h",
+        "reviewerIdentity": "Chief Eng. Rao",
+        "reviewerRole": "DIRECTOR",
+        "reviewTimestamp": "2026-09-19T07:21:57.409Z",
+        "reviewerComment": "Upgraded to priority 1 due to school zone"
+      },
+      {
+        "auditId": "AUDIT-1789802517428-NQ6S",
+        "insightId": "INSIGHT-1789802517364-ZVLTB",
+        "defectType": "CRACK",
+        "componentCategory": "GENERAL_INFRASTRUCTURE",
+        "location": "Location unavailable",
+        "timestampAiGeneration": "2026-09-19T07:21:57.364Z",
+        "originalAiInterpretation": {
+          "level": "MODERATE",
+          "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard."
+        },
+        "originalAiRecommendation": {
+          "title": "Schedule Depot Mechanical Inspection",
+          "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+          "urgencyText": "Within standard maintenance window (48-72 hours)"
+        },
+        "evidenceReferences": [
+          {
+            "documentId": "DOC-KB-MU823JXL-304",
+            "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+            "organization": "United Nations Economic Commission for Europe (UNECE)",
+            "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+            "page": "42-51",
+            "url": "https://unece.org/transport/vehicle-regulations"
+          },
+          {
+            "documentId": "DOC-KB-MU823JXZ-790",
+            "documentTitle": "IRC:SP:84-2019 Manual of Specifications and Standards for Four Laning of Highways",
+            "organization": "Indian Roads Congress (IRC)",
+            "section": "Section 9 & 12: Pavement Performance Standards, Surface Roughness & Remedial Interventions",
+            "page": "68-74",
+            "url": "https://irc.nic.in"
+          },
+          {
+            "documentId": "DOC-KB-MU823JXV-365",
+            "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+            "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+            "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+            "page": "14-22",
+            "url": "https://morth.nic.in/intelligent-transportation-systems"
+          }
+        ],
+        "reviewDecision": "REJECTED",
+        "reviewerIdentity": "Auditor V. Naidu",
+        "reviewerRole": "QUALITY_AUDITOR",
+        "reviewTimestamp": "2026-09-19T07:21:57.428Z",
+        "reviewerComment": "False positive shadow from tree"
+      }
+    ]
+  },
+  {
+    "id": "INSIGHT-1789802549695-LU9D8",
+    "timestamp": "2026-09-19T07:22:29.695Z",
+    "inputSummary": {
+      "detectedIssue": "POTHOLE",
+      "componentCategory": "GENERAL_INFRASTRUCTURE",
+      "locationText": "Coastal Corridor NH-16 Sector 4",
+      "confidenceText": "94%",
+      "rawConfidence": 0.94,
+      "rawSeverity": "HIGH"
+    },
+    "contextEnrichment": {
+      "matchedBus": null,
+      "corridorInformation": "Corridor telemetry unavailable",
+      "historicalDefectsCount": 0,
+      "linkedWorkOrdersCount": 0,
+      "openWorkOrderDetails": "No existing municipal work order linked to this component",
+      "heatwaveAlert": "Daba Gardens Commercial Basin: 51.4°C surface temp (RED_SEVERE)",
+      "trafficBottleneck": "No active corridor bottleneck flagged",
+      "dataAvailability": {
+        "hasGps": true,
+        "hasFleetTelemetry": false,
+        "hasWorkOrderMatch": false,
+        "hasEnvironmentalData": true
+      }
+    },
+    "riskInterpretation": {
+      "level": "MODERATE",
+      "rationale": "Moderate maintenance priority. The condition compromises commuter comfort or material service life, but does not present an immediate catastrophic hazard.",
+      "factorsConsidered": [
+        "Computer Vision classification: POTHOLE (HIGH)",
+        "Detection model confidence: 94%",
+        "Component category: GENERAL_INFRASTRUCTURE",
+        "Transit fleet assignment: unverified/general",
+        "Authoritative standard correlation: UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)"
+      ]
+    },
+    "whyThisResult": {
+      "summary": "The system processed the inspection frame using the active Computer Vision model, registering a POTHOLE on component category GENERAL_INFRASTRUCTURE. Authoritative safety standards from United Nations Economic Commission for Europe (UNECE) were retrieved to provide normative context.",
+      "observableCvCharacteristics": "Computer Vision detected structural surface variation corresponding to POTHOLE in the provided inspection frame.",
+      "contextualFactors": "Vehicle route correlation unavailable from provided metadata. No existing municipal work order linked to this component.",
+      "evidenceCorrelation": "Correlated against UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses) (United Nations Economic Commission for Europe (UNECE), Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways). Guidance indicates specific inspection and remediation criteria for general_infrastructure components.",
+      "missingInformationNotes": "Structural sub-surface material fatigue cannot be measured via single 2D optical frame; physical tactile inspection recommended."
+    },
+    "retrievedEvidence": [
+      {
+        "chunkId": "DOC-KB-MU823JXL-304-CHK-001",
+        "documentId": "DOC-KB-MU823JXL-304",
+        "documentTitle": "UNECE Regulation No. 107 - Uniform Provisions Concerning Public Service Vehicles (Buses)",
+        "organization": "United Nations Economic Commission for Europe (UNECE)",
+        "category": "VEHICLE_SAFETY",
+        "section": "Annex 3: Passenger Compartment Interior Safety, Handrails, Emergency Exits and Gangways",
+        "page": "42-51",
+        "source": "UN ECE Agreement Concerning the Adoption of Harmonized Technical Regulations",
+        "url": "https://unece.org/transport/vehicle-regulations",
+        "similarityScore": 0.17,
+        "text": "To ensure passenger survivability and prevent injuries during transit operations, public service buses (Category M2 and M3) must comply with rigorous interior structural standards: 1. Handrails and Handholds: Handrails must be of circular cross-section with diameter between 30 mm and 45 mm, providing clearance of not less than 40 mm to the vehicle body or seat. Fractured, loosened, or corroded handrails represent an IMMEDIATE SAFETY HAZARD and require vehicle grounding until repaired. 2. Seat Anchoring and Cushions: Passenger seats must be firmly anchored to the floor or sidewall, resisting dynamic loads of 10g in longitudinal deceleration without detachment. Torn upholstery exposing sharp inner springs or damaged frames must be rectified before passenger service. 3. Service Doors and Emergency Exits: All power-operated passenger doors must feature anti-pinch sensitive edges that automatically reverse door closure if an obstruction of 30 mm is detected. Emergency door controls must operate independently of the primary electrical circuit and remain illuminated. 4. Flooring and Gangways: Flooring throughout passenger aisles must have non-slip surface texture even when wet (minimum wet coefficient of friction 0.5). Damaged or peeling floor linoleum that creates trip hazards must be replaced within 48 hours."
+      },
+      {
+        "chunkId": "DOC-KB-MU823JXV-365-CHK-001",
+        "documentId": "DOC-KB-MU823JXV-365",
+        "documentTitle": "AIS-140: Intelligent Transportation Systems (ITS) - Requirements for Public Transport Vehicles",
+        "organization": "Automotive Research Association of India (ARAI) & MoRTH",
+        "category": "DRIVER_SAFETY",
+        "section": "Part 1, Section 4 & 5: Vehicle Location Tracking, Driver Vigilance Advisory Integration, and Emergency Escalations",
+        "page": "14-22",
+        "source": "Automotive Industry Standard AIS-140 (Rev. 1) / MoRTH Vehicle Telematics Directive",
+        "url": "https://morth.nic.in/intelligent-transportation-systems",
+        "similarityScore": 0.11,
+        "text": "AIS-140 specifies safety and telematics architectures for public transport vehicles (buses and commercial passenger fleets): 1. Vehicle Location Tracking (VLT): Vehicle telemetry units must provide GNSS positioning with minimum 5m radial accuracy, transmitting vehicle speed, latitude, longitude, and engine operating status at intervals not exceeding 5 seconds in dynamic mode. 2. Driver Vigilance & In-Cabin Monitoring Advisory: Under Section 4.2, onboard cameras or optical sensors monitoring driver alertness provide operational advisory indications for drowsiness, sustained eyelid closure, and erratic head deviation. Optical signals serve as decision support and must be coupled with acoustic cabin alerts to warn the operator before escalating to central fleet dispatch. 3. Emergency Alert Escalations: When an in-cabin emergency alert or critical vigilance threshold is reached, telemetry packets must be flagged as HIGH_PRIORITY and transmitted immediately to the municipal command and control center (ICCC). 4. Privacy Safeguards: Cabin optical monitoring systems must process facial geometry parameters (such as EAR and PERCLOS) at the edge without retaining permanent facial identity biometric stores, preserving driver privacy under statutory information security norms."
+      },
+      {
+        "chunkId": "DOC-KB-MU823JXN-821-CHK-001",
+        "documentId": "DOC-KB-MU823JXN-821",
+        "documentTitle": "United Nations SDG 11: Sustainable Cities and Communities - Target 11.2 Framework",
+        "organization": "United Nations Human Settlements Programme (UN-Habitat)",
+        "category": "SUSTAINABILITY",
+        "section": "Target 11.2: Safe, Affordable, Accessible and Sustainable Transport Systems for All",
+        "page": "Clause 11.2.1",
+        "source": "UN Sustainable Development Goals Knowledge Platform",
+        "url": "https://sdgs.un.org/goals/goal11",
+        "similarityScore": 0.11,
+        "text": "Target 11.2 of the 2030 Agenda for Sustainable Development calls upon municipal authorities to: \"By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons.\" Core Municipal Indicators & AI Decision Support Roles: - Indicator 11.2.1: Proportion of population that has convenient access to public transport (within 500m of a bus stop or 1,000m of a rail terminal). - Road Safety Equity: Reducing pedestrian fatalities in low-income urban corridors through automated road defect detection, high-contrast crosswalk maintenance, and prompt hazard rectification. - Fleet Decarbonization and Reliability: Minimizing stop-and-go delays at uncoordinated signals and bottlenecks reduces greenhouse gas emissions and particulate matter (PM2.5) emissions by up to 22% in urban transit sectors. Proactive pavement maintenance lowers vehicle rolling resistance and fuel consumption."
+      }
+    ],
+    "hasEvidence": true,
+    "evidenceDisclaimer": "Relevant evidence retrieved from authoritative public transport safety and engineering frameworks.",
+    "recommendedAction": {
+      "title": "Schedule Depot Mechanical Inspection",
+      "actionText": "Perform physical inspection of the flagged component during the upcoming scheduled maintenance cycle.",
+      "urgencyText": "Within standard maintenance window (48-72 hours)",
+      "isAutonomous": false,
+      "requiresHumanReview": true
+    },
+    "missingInformation": [
+      "Fleet vehicle registry cross-reference unavailable (bus number not matched to active campus roster).",
+      "Sub-surface fastener torque, tensile stress, and material fatigue are not measurable from 2D optical pixels."
+    ],
+    "limitations": [
+      "Decision Support Advisory Only: This AI analysis provides automated prioritization guidance for human inspectors and does not constitute statutory engineering certification.",
+      "Human Review Required: All consequential maintenance actions, bus route suspensions, or work-order authorizations require physical sign-off by a certified municipal transport engineer.",
+      "Optical Sensor Constraints: Visual CV inferences can be affected by ambient cabin lighting, occlusions, glare, and camera angle variations.",
+      "Document Grounding Scope: Retrieved knowledge is grounded in indexed regulatory frameworks (SDG 11 / UNECE / IRC) and must be cross-checked against current depot SOPs."
+    ],
+    "sdgAlignment": {
+      "sdgGoal": "SDG 11: Sustainable Cities and Communities",
+      "target": "Target 11.2: Affordable and sustainable transport systems",
+      "contributionNote": "Automated infrastructure intelligence assists municipal operators with public-transit safety reference indicators, reducing transit downtime and providing operational decision guidance without implying statutory compliance."
+    },
+    "humanReview": {
+      "status": "PENDING"
+    },
+    "reviewHistory": [],
+    "auditTrail": []
+  }
+]
