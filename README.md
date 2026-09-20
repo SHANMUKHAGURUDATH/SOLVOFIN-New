@@ -1,5 +1,5 @@
 ````markdown
-# SOLVOFIN — AI-Powered Urban Intelligence for Road Safety and Sustainable Mobility
+#SOLVOFIN — AI-Powered Urban Intelligence for Road Safety and Sustainable Mobility
 
 <p align="center">
   <strong>AI-Powered Urban Intelligence Platform for Safer Roads, Smarter Mobility and Sustainable Cities</strong>
