@@ -1,5 +1,4 @@
-````markdown
-#SOLVOFIN — AI-Powered Urban Intelligence for Road Safety and Sustainable Mobility
+# SOLVOFIN — AI-Powered Urban Intelligence for Road Safety and Sustainable Mobility
 
 <p align="center">
   <strong>AI-Powered Urban Intelligence Platform for Safer Roads, Smarter Mobility and Sustainable Cities</strong>
@@ -96,7 +95,7 @@ Government CCTV    Fleet & Traffic Data
        Action / Work Order
                 ↓
         Report + Audit Trail
-````
+```
 
 ---
 
@@ -997,6 +996,3 @@ The long-term vision is to move from fragmented urban information toward **evide
 This project is currently maintained as an academic, internship and prototype project.
 
 Please contact the project author before commercial redistribution or reuse of substantial portions of the implementation.
-
-```
-```
