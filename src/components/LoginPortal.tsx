@@ -9,6 +9,42 @@ interface LoginPortalProps {
   initialRole?: 'GOVERNMENT' | 'CITIZEN';
 }
 
+const parseApiResponse = async (res: Response): Promise<any> => {
+  const contentType = res.headers.get('content-type') || '';
+  const rawText = await res.text();
+
+  if (!rawText.trim()) {
+    return {};
+  }
+
+  if (contentType.toLowerCase().includes('application/json')) {
+    try {
+      return JSON.parse(rawText);
+    } catch {
+      throw new Error('The server returned invalid JSON. Please restart/redeploy the Solvofin backend.');
+    }
+  }
+
+  // A Vite/Vercel/hosting fallback can return an HTML/text page for a missing API route.
+  // Do not expose the raw HTML or let JSON.parse() throw an unclear syntax error.
+  const cleanText = rawText
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!res.ok) {
+    throw new Error(
+      cleanText ||
+        `API request failed with HTTP ${res.status}. Check that the Solvofin backend is running.`
+    );
+  }
+
+  throw new Error(
+    `The Solvofin API returned a non-JSON response (HTTP ${res.status}). ` +
+      'Make sure the frontend is connected to the Solvofin backend.'
+  );
+};
+
 export const LoginPortal: React.FC<LoginPortalProps> = ({
   isOpen,
   onClose,
@@ -59,7 +95,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
             password: password.trim(),
           }),
         });
-        const data = await res.json();
+        const data = await parseApiResponse(res);
         if (!res.ok) throw new Error(data.error || 'Registration failed');
         onLoginSuccess(data.user);
         onClose();
@@ -73,7 +109,7 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
             role: selectedRole,
           }),
         });
-        const data = await res.json();
+        const data = await parseApiResponse(res);
         if (!res.ok) throw new Error(data.error || 'Authentication failed');
         onLoginSuccess(data.user);
         onClose();
