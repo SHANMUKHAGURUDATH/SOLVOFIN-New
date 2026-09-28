@@ -9,42 +9,6 @@ interface LoginPortalProps {
   initialRole?: 'GOVERNMENT' | 'CITIZEN';
 }
 
-const parseApiResponse = async (res: Response): Promise<any> => {
-  const contentType = res.headers.get('content-type') || '';
-  const rawText = await res.text();
-
-  if (!rawText.trim()) {
-    return {};
-  }
-
-  if (contentType.toLowerCase().includes('application/json')) {
-    try {
-      return JSON.parse(rawText);
-    } catch {
-      throw new Error('The server returned invalid JSON. Please restart/redeploy the Solvofin backend.');
-    }
-  }
-
-  // A Vite/Vercel/hosting fallback can return an HTML/text page for a missing API route.
-  // Do not expose the raw HTML or let JSON.parse() throw an unclear syntax error.
-  const cleanText = rawText
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-  if (!res.ok) {
-    throw new Error(
-      cleanText ||
-        `API request failed with HTTP ${res.status}. Check that the Solvofin backend is running.`
-    );
-  }
-
-  throw new Error(
-    `The Solvofin API returned a non-JSON response (HTTP ${res.status}). ` +
-      'Make sure the frontend is connected to the Solvofin backend.'
-  );
-};
-
 export const LoginPortal: React.FC<LoginPortalProps> = ({
   isOpen,
   onClose,
@@ -77,6 +41,25 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
     }
   };
 
+  const readApiResponse = async (res: Response) => {
+    const contentType = res.headers.get('content-type') || '';
+    const raw = await res.text();
+
+    if (contentType.includes('application/json')) {
+      try {
+        return raw ? JSON.parse(raw) : {};
+      } catch {
+        throw new Error('The server returned invalid JSON. Please restart/redeploy the Solvofin backend.');
+      }
+    }
+
+    const message = raw.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (res.status === 404) {
+      throw new Error('Solvofin API is not running on this deployment (404). Deploy the project as a Node/Express Web Service, not as a static site.');
+    }
+    throw new Error(message || `Server returned HTTP ${res.status}`);
+  };
+
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -95,8 +78,9 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
             password: password.trim(),
           }),
         });
-        const data = await parseApiResponse(res);
+        const data = await readApiResponse(res);
         if (!res.ok) throw new Error(data.error || 'Registration failed');
+        if (!data.user) throw new Error('Registration succeeded but the server did not return a user.');
         onLoginSuccess(data.user);
         onClose();
       } else {
@@ -109,13 +93,14 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
             role: selectedRole,
           }),
         });
-        const data = await parseApiResponse(res);
+        const data = await readApiResponse(res);
         if (!res.ok) throw new Error(data.error || 'Authentication failed');
+        if (!data.user) throw new Error('Authentication succeeded but the server did not return a user.');
         onLoginSuccess(data.user);
         onClose();
       }
     } catch (err: any) {
-      setErrorMsg(err.message || 'Authentication error');
+      setErrorMsg(err instanceof Error ? err.message : 'Authentication error');
     } finally {
       setIsLoading(false);
     }
