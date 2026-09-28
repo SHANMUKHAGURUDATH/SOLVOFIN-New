@@ -59,8 +59,16 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
             password: password.trim(),
           }),
         });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'Registration failed');
+        const raw = await res.text();
+        let data: any = null;
+        try {
+          data = raw ? JSON.parse(raw) : null;
+        } catch {
+          throw new Error(
+            `Solvofin API returned a non-JSON response (HTTP ${res.status}). ${raw.slice(0, 160)}`
+          );
+        }
+        if (!res.ok) throw new Error(data?.error || `Registration failed (HTTP ${res.status})`);
         onLoginSuccess(data.user);
         onClose();
       } else {
@@ -73,8 +81,16 @@ export const LoginPortal: React.FC<LoginPortalProps> = ({
             role: selectedRole,
           }),
         });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'Authentication failed');
+        const raw = await res.text();
+        let data: any = null;
+        try {
+          data = raw ? JSON.parse(raw) : null;
+        } catch {
+          throw new Error(
+            `Solvofin API returned a non-JSON response (HTTP ${res.status}). ${raw.slice(0, 160)}`
+          );
+        }
+        if (!res.ok) throw new Error(data?.error || `Authentication failed (HTTP ${res.status})`);
         onLoginSuccess(data.user);
         onClose();
       }

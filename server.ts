@@ -3,7 +3,6 @@ import path from 'path';
 import fs from 'fs';
 import crypto from 'crypto';
 import multer from 'multer';
-import { createServer as createViteServer } from 'vite';
 import { db } from './server/db';
 import { executeAutomatedAnalysis, subscribeToJob } from './server/aiPipeline';
 import { generateCSV, generatePDFReport } from './server/exportService';
@@ -3054,6 +3053,7 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 // ================= VITE INTEGRATION =================
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
